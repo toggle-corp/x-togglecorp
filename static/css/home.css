@@ -1,0 +1,95 @@
+html, body{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+}
+a, a:visited, a:active, a:focus, a:hover{
+    text-decoration: none;
+}
+header{
+    height: 100vh;
+    background-color: #111;
+    background-blend-mode: soft-light;
+    color: #fff;
+    background-image: url('../img/header-bg.jpg');
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+header h1{
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 8em;
+    font-weight: 300;
+}
+header h1 span{
+    color: #c0392b;
+    font-weight: 400;
+}
+main{
+    background-color: #eee;
+    color: #414141;
+    padding: 16px;
+}
+main h2{
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-top: 48px;
+    margin-bottom: 48px;
+    font-size: 2.5em;
+    color: #c0392b;
+}
+
+.service{
+    text-align: center;
+    padding: 32px;
+}
+
+hr{
+    border: 1px solid #ddd;
+}
+
+.member{
+    padding: 24px;
+    text-align: center;
+}
+
+.member img{
+    width: 200px;
+    height: 200px;
+}
+.member h3{
+}
+.member p{
+    font-weight: 300;
+    color: #414141;
+}
+.member a{
+    margin: 10px;
+}
+
+#contact{
+    margin-bottom: 48px;
+}
+#contact .fa{
+    width: 48px;
+}
+
+footer{
+    background-color: #414141;
+    color: #eee;
+    padding: 64px 0;
+    font-weight: 300;
+}
+footer p{
+    text-align: center;
+    margin-bottom: 0;
+}
