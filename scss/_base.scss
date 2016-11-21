@@ -1,0 +1,17 @@
+$primary-color: #3498db;
+
+
+body{
+    font-family: 'Libre Franklin', sans-serif;
+    background-color: #fafafa;
+    color: #414141;
+}
+
+a, a:hover, a:active, a:visited, a:focus{
+    text-decoration: none;
+    color: $primary-color;
+}
+
+a, button, input[type="submit"], .btn{
+    text-transform: uppercase;
+}

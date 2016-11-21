@@ -1,100 +1,126 @@
-html, body{
-    padding: 0;
-    margin: 0;
-}
+body {
+  font-family: 'Libre Franklin', sans-serif;
+  background-color: #fafafa;
+  color: #414141; }
 
-body{
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 18px;
-}
-a, a:visited, a:active, a:focus, a:hover{
-    text-decoration: none;
-}
-header{
-    height: 100vh;
-    background-color: #111;
-    background-blend-mode: soft-light;
-    color: #fff;
-    background-image: url('../img/header-bg.jpg');
-    background-attachment: fixed;
-    background-position: center center;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-}
-header h1{
-    margin: 0;
-    text-transform: uppercase;
-    font-size: 8em;
-    font-weight: 300;
-}
-header h1 span{
-    color: #c0392b;
-    font-weight: 400;
-}
-main{
-    background-color: #eee;
-    color: #414141;
-    padding: 16px;
-}
-main h2{
-    text-transform: uppercase;
-    font-weight: 300;
-    margin-top: 48px;
-    margin-bottom: 48px;
-    font-size: 2.5em;
-    color: #c0392b;
-}
+a, a:hover, a:active, a:visited, a:focus {
+  text-decoration: none;
+  color: #3498db; }
 
-.service{
-    text-align: center;
-    padding: 32px;
-}
+a, button, input[type="submit"], .btn {
+  text-transform: uppercase; }
 
-hr{
-    border: 1px solid #ddd;
-}
+body #wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  perspective: 1px;
+  overflow-x: hidden;
+  overflow-y: scroll; }
+  body #wrapper #parallax-group-1 {
+    position: relative;
+    transform-style: preserve-3d; }
+    body #wrapper #parallax-group-1 #background {
+      transform: translateZ(-1px) scale(2);
+      height: 100vh;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      background-image: url("../img/header-bg.jpg");
+      background-position: center center;
+      background-size: cover;
+      background-color: #717171;
+      background-blend-mode: multiply; }
+    body #wrapper #parallax-group-1 #foreground {
+      position: absolute;
+      top: 0;
+      width: 100%; }
+      body #wrapper #parallax-group-1 #foreground header {
+        height: 50vh;
+        color: #fff;
+        padding: 24px;
+        margin: 0; }
+        body #wrapper #parallax-group-1 #foreground header h1 {
+          text-transform: uppercase;
+          font-weight: 300; }
+          body #wrapper #parallax-group-1 #foreground header h1 span {
+            color: #5faee3; }
+        body #wrapper #parallax-group-1 #foreground header #logo {
+          width: 300px; }
+        body #wrapper #parallax-group-1 #foreground header #menu {
+          float: right; }
+          body #wrapper #parallax-group-1 #foreground header #menu a {
+            display: inline-block;
+            margin: 24px;
+            color: #fff; }
+        body #wrapper #parallax-group-1 #foreground header #intro {
+          font-family: 'Abel', sans-serif;
+          font-size: 3em;
+          color: white;
+          padding: 24px;
+          text-align: center; }
+        body #wrapper #parallax-group-1 #foreground header #extra {
+          text-align: center;
+          color: rgba(255, 255, 255, 0.6);
+          font-size: 1.3em; }
+      body #wrapper #parallax-group-1 #foreground h2 {
+        font-weight: 300;
+        text-transform: uppercase; }
+      body #wrapper #parallax-group-1 #foreground #services {
+        background: linear-gradient(transparent, #3498db);
+        color: rgba(255, 255, 255, 0.8);
+        padding: 24px;
+        min-height: 50vh; }
+        body #wrapper #parallax-group-1 #foreground #services h2 {
+          color: #fff;
+          margin-bottom: 64px;
+          text-align: center; }
+        body #wrapper #parallax-group-1 #foreground #services .service {
+          text-align: center;
+          padding: 24px; }
+          body #wrapper #parallax-group-1 #foreground #services .service .fa {
+            margin-bottom: 32px; }
+          body #wrapper #parallax-group-1 #foreground #services .service h3 {
+            font-family: 'Abel', sans-serif; }
+      body #wrapper #parallax-group-1 #foreground #members {
+        padding: 24px;
+        background-color: #f5f5f5; }
+        body #wrapper #parallax-group-1 #foreground #members #member-list {
+          display: flex;
+          flex-wrap: wrap;
+          align-content: center;
+          justify-content: center; }
+        body #wrapper #parallax-group-1 #foreground #members h2 {
+          margin-bottom: 48px; }
+        body #wrapper #parallax-group-1 #foreground #members .member {
+          background-color: #fff;
+          text-align: center;
+          flex-basis: 360px;
+          padding: 24px;
+          margin: 32px;
+          box-shadow: 0 2px 7px 1px rgba(0, 0, 0, 0.5); }
+          body #wrapper #parallax-group-1 #foreground #members .member img {
+            width: 256px; }
+          body #wrapper #parallax-group-1 #foreground #members .member .fa {
+            margin: 16px; }
+        @media screen and (min-width: 1367px) {
+          body #wrapper #parallax-group-1 #foreground #members .member {
+            margin: 10px;
+            flex-basis: 320px; } }
+      body #wrapper #parallax-group-1 #foreground #contact {
+        background-color: #fff;
+        padding: 24px; }
+        body #wrapper #parallax-group-1 #foreground #contact h2 {
+          margin-bottom: 54px; }
+        body #wrapper #parallax-group-1 #foreground #contact .fa {
+          width: 32px; }
+      body #wrapper #parallax-group-1 #foreground footer {
+        padding: 48px;
+        background-color: #414141;
+        color: #ddd;
+        font-weight: 500;
+        text-align: center; }
 
-.member{
-    padding: 24px;
-    text-align: center;
-}
-
-.member img{
-    width: 200px;
-    height: 200px;
-}
-.member h3{
-}
-.member p{;
-    color: #414141;
-}
-.member a{
-    margin: 10px;
-}
-
-#contact{
-    margin-bottom: 48px;
-}
-#contact .fa{
-    width: 48px;
-}
-
-footer{
-    background-color: #414141;
-    color: #eee;
-    padding: 64px 0;
-    font-weight: 300;
-}
-footer p{
-    text-align: center;
-    margin-bottom: 0;
-}
-@media only screen and (max-width: 900px) {
-    body{
-        font-size: 14px;
-    }
-    header h1 { font-size: 4em; }
-}
+/*# sourceMappingURL=home.css.map */

@@ -1,0 +1,119 @@
+html, body{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 16px;
+}
+a, a:visited, a:active, a:focus, a:hover{
+    text-decoration: none;
+}
+#wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    perspective: 1px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+#parallax-group-1{
+    position: relative;
+    transform-style: preserve-3d;
+}
+#background{
+    transform: translateZ(-1px) scale(2);
+    height: 150vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+
+    background-image: url('../img/header-bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-color: #717171;
+    background-blend-mode: multiply;
+}
+#foreground{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+header{
+    height: 50vh;
+    color: #fff;
+    padding: 56px 24px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+header h1{
+    align-self: flex-start;
+    flex-basis: 50%;
+}
+h1, h2{
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 56px;
+}
+header h1 span{
+    color: #27ae60;
+}
+header #intro{
+    font-weight: bold;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-family: 'Abel', sans-serif;
+}
+header p{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#services{
+    padding: 56px 24px;
+    background-color: rgba(39,174,96 ,0.8);
+    color: #fff;
+}
+.service{
+    text-align: center;
+    padding: 24px;
+    font-family: 'Abel', sans-serif;
+}
+.service i{
+    margin-bottom: 24px;
+}
+
+#members{
+    padding: 56px 24px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.member{
+    padding: 24px;
+    text-align: center;
+}
+.member img{
+    width: 200px;
+}
+.member a{
+    margin: 16px;
+}
+
+#contact{
+    padding: 56px 24px;
+    background-color: #fff;
+}
+#contact .fa{
+    width: 32px;
+}
+
+footer{
+    padding: 56px 24px;
+    text-align: center;
+}
