@@ -1,0 +1,82 @@
+{% load staticfiles %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Mobile Apps - Toggle Corp</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/portfolio.css' %}" />
+    
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/portfolio.js' %}"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1><a href="http://togglecorp.com/">Toggle <span>Corp</span></a></h1>
+    </header>
+
+    <main>
+        <div class="content-container canvas-container">
+            <section class="content">
+                <h2>Notifica</h2>
+                <p>
+                    Notifica is an android application, with an accompanying web app, built for students and teachers for increasing classroom productivity. It provides students and teachers a shared medium for notices, assignments and class schedule, keeping users up to date about all sorts of classroom activities.
+                </p>
+            </section>
+
+            <section class="content next">
+                <h2>Flipped</h2>
+                <p>
+                    Flipped is a platform-adventure game in a world of mirrors, which when crossed lead to alternate realities with conflicting gravities. It is a 2d mobile game with side-scroller view. The player has to guide a boy through a world where the obstacles are ‘Mirrors’ such that when the protagonist encounters a mirror, he is ported to a world where everything gets <i>flipped</i>.
+                </p>
+            </section>
+
+            <section class="content next">
+                <h2>Microphone</h2>
+                <p>
+                    Microphone is a highly customizable audio recording application. It provides users with all customization settings that their device support and allows for the best voice recording results. 
+                </p>
+            </section>
+
+            <section class="content next">
+                <h2>Miti</h2>
+                <p>
+                    Miti is a nepali calendar application with minimum hassle. It does just what it intends to: show the Bikram Sambat calendar along with tithi. It also comed with some pretty nice widgets for your home screens.
+                </p>
+            </section>
+
+            <section class="content next">
+                <h2>Paiso</h2>
+                <p>
+                    $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ 
+                </p>
+            </section>
+
+
+            <canvas id="the-canvas"></canvas>
+        </div>
+
+        <section class="side">
+            <div class="preview">
+                <img src="{% static 'img/preview_test.png' %}"></img>
+                <img src="{% static 'img/preview_test.png' %}" class="next"></img>
+                <img src="{% static 'img/preview_test.png' %}" class="next"></img>
+                <img src="{% static 'img/preview_test.png' %}" class="next"></img>
+                <img src="{% static 'img/preview_test.png' %}" class="next"></img>
+            </div>
+
+            <div class="nav">
+                <div id="next"><span class="fa fa-angle-down"></span></div>
+                <div id="prev"><span class="fa fa-angle-up"></span></div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
