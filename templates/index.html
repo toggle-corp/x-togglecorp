@@ -8,108 +8,126 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Toggle Corp.</title>
+    
     <link href="https://fonts.googleapis.com/css?family=Abel|Libre+Franklin:300,400,500" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="{% static 'css/bootstrap.min.css' %}" rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
     <link href="{% static 'css/home.css' %}" rel='stylesheet' type='text/css'>
+
     <script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/home.js' %}"></script>
 </head>
-<body translate="no">
-    <div id="wrapper">
-        <div id="parallax-group-1">
-            <div id="background">
+
+<body>
+    <header>
+        <h1><a href="#home">Toggle<span>Corp</span></a></h1>
+        <div id="menu">
+            <div id="toggle-menu">
+                <button href="javascript:void(0);" style="font-size:15px;" onclick="toggleMenu()">☰</button>
             </div>
-            <div id="foreground">
-                <header>
-                    <div id="menu">
-                        <a href="#members">Our Team</a>
-                        <a href="#contact">Contact us</a>
-                    </div>
-                    <img id="logo" src="{% static 'img/logo.png'%}">
-                    <p id="intro">We do awesome stuff</p>
-                    <!-- <p id="extra">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p> -->
-                </header>
-                <section id="services">
-                    <div class="container-fluid">
-                        <h2>Our Services</h2>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="service">
-                                    <i class="fa fa-cogs fa-3x"></i>
-                                    <h3>Desktop &amp; Mobile App Development</h3>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="service">
-                                    <i class="fa fa-globe fa-3x"></i>
-                                    <h3>Web Design &amp; Development</h3>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="service">
-                                    <i class="fa fa-adjust fa-3x"></i>
-                                    <h3>Graphics Design &amp; Animation</h3>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="service">
-                                    <i class="fa fa-database fa-3x"></i>
-                                    <h3>Database Design &amp; Administration</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section id="members">
-                    <h2>Our Team</h2>
-                    <div id="member-list">
-                        <div class="member">
-                            <img class="img-circle" src="{% static 'img/fh.jpg' %}">
-                            <h3>Ankit Mehta</h3>
-                            <p>Front-end Developer / System Designer</p>
-                            <p><a href="https://github.com/FrozenHelium"><i class="fa fa-github"></i></a><a href="https://www.linkedin.com/in/frozenhelium"><i class="fa fa-linkedin"></i></a></p>
-                        </div>
-                        <div class="member">
-                            <img class="img-circle" src="{% static 'img/bibek.jpg' %}">
-                            <h3>Bibek Dahal</h3>
-                            <p>Back-end Developer / System-Designer</p>
-                            <p><a href="https://github.com/bibekdahal"><i class="fa fa-github"></i></a><a href="https://www.linkedin.com/in/bibek-dahal"><i class="fa fa-linkedin"></i></a></p>
-                        </div>
-                        <div class="member">
-                            <img class="img-circle" src="{% static 'img/pprabesh.jpg' %}">
-                            <h3>Prabesh Pathak</h3>
-                            <p>Developer / Designer</p>
-                            <p><a href="https://github.com/pprabesh"><i class="fa fa-github"></i></a><a href="https://www.linkedin.com/in/prabesh-pathak-423202a9"><i class="fa fa-linkedin"></i></a></p>
-                        </div>
-                        <div class="member">
-                            <img class="img-circle" src="{% static 'img/adi.jpg' %}">
-                            <!-- <i class="fa fa-user-secret fa-4x"></i> -->
-                            <h3>Aditya Khatri</h3>
-                            <p>Developer / Designer</p>
-                            <p><a href="https://github.com/AdityaKhatri"><i class="fa fa-github"></i></a><a href="https://www.linkedin.com/in/adityakhatri47"><i class="fa fa-linkedin"></i></a></p>
-                        </div>
-                        <div class="member">
-                            <img class="img-circle" src="{% static 'img/ewan.jpg' %}">
-                            <!-- <i class="fa fa-user-secret fa-4x"></i> -->
-                            <h3>Ewan Oglethorpe</h3>
-                            <p>Advisor</p>
-                            <p><a href="https://github.com/eoglethorpe"><i class="fa fa-github"></i></a><a href="https://www.linkedin.com/in/ewan-oglethorpe-b5b12349"><i class="fa fa-linkedin"></i></a></p>
-                        </div>
-                    </div>
-                </section>
-                <section id="contact">
-                    <div class="container-fluid">
-                        <h2>Contact Us</h2>
-                        <p><i class="fa fa-phone"></i>+977-9841969697 (Prabesh Pathak)</p>
-                        <p><i class="fa fa-envelope"></i><a style="text-transform:lowercase" href="mailto:corp.toggle@gmail.com">corp.toggle@gmail.com</a></p>
-                    </div>
-                </section>
-                <footer>
-                    <p>Copyright (c) 2016 Copyright Holder All Rights Reserved.</p>
-                </footer>
-            </div>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#team">The team</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
         </div>
-    </div>
+    </header>
+
+    <main>
+        <section id="home">
+            <a id="we" href="#">We</a><br>
+            <a id="do" href="#">Do</a><br>
+            <a id="awesome" href="#">Awesome</a><br>
+            <a id="stuff" href="#">Stuff</a>
+        </section>
+        <section id="services">
+            <h2>Services</h2>
+            <div id="service-list">
+               <div class="service">
+                   <i class="fa fa-cogs fa-3x"></i>
+                   <h3>Custom Software Development</h3>
+               </div>
+               <div class="service">
+                  <i class="fa fa-mobile fa-3x" style="transform: scale(1.6);"></i>
+                  <h3>Mobile App Development</h3>
+               </div>
+               <div class="service">
+                   <i class="fa fa-globe fa-3x"></i>
+                   <h3>Web Design &amp; Development</h3>
+               </div>
+               <div class="service">
+                   <i class="fa fa-search fa-3x"></i>
+                   <h3>Search Engine Optimization</h3>
+               </div>
+               <div class="service">
+                   <i class="fa fa-adjust fa-3x"></i>
+                   <h3>Graphics Design</h3>
+               </div>
+               <div class="service">
+                   <i class="fa fa-spinner fa-3x"></i>
+                   <h3>Animation</h3>
+               </div>
+               <div class="service">
+                   <i class="fa fa-database fa-3x"></i>
+                   <h3>Database Design &amp; Administration</h3>
+               </div>
+               <div class="service">
+                   <i class="fa fa-wrench fa-3x"></i>
+                   <h3>Software Maintenance &amp; Support</h3>
+               </div>
+           </div>
+        </section>
+        <section id="team">
+            <h2>The Team</h2>
+            <div id="member-list">
+                <div class="member">
+                    <img src="{% static 'img/adi.jpg' %}">
+                    <h3>Aditya Khatri</h3>
+                    <section>
+                        <p>Developer/Designer</p>
+                        <p><a href="https://github.com/AdityaKhatri"><i class="fa fa-github"></i></a><a href="https://www.linkedin.com/in/adityakhatri47"><i class="fa fa-linkedin"></i></a></p>
+                    </section>
+                </div>
+                <div class="member">
+                    <img src="{% static 'img/fh.jpg' %}">
+                    <h3>Ankit Mehata</h3>
+                    <section>
+                        <p>Front-end Developer / System Designer</p>
+                        <p><a href="https://github.com/FrozenHelium"><i class="fa fa-github"></i></a><a href="https://www.linkedin.com/in/frozenhelium"><i class="fa fa-linkedin"></i></a></p>
+                    </section>
+                </div>
+                <div class="member">
+                    <img src="{% static 'img/bibek.jpg' %}">
+                    <h3>Bibek Dahal</h3>
+                    <section>
+                        <p>Back-end Developer / System Designer</p>
+                        <p><a href="https://github.com/bibekdahal"><i class="fa fa-github"></i></a><a href="https://www.linkedin.com/in/bibek-dahal"><i class="fa fa-linkedin"></i></a></p>
+                    </section>
+                </div>
+                <div class="member">
+                    <img src="{% static 'img/pprabesh.jpg' %}">
+                    <h3>Prabesh Pathak</h3>
+                    <section>
+                        <p>Developer / Designer</p>
+                        <p><a href="https://github.com/pprabesh"><i class="fa fa-github"></i></a><a href="https://www.linkedin.com/in/prabesh-pathak-423202a9"><i class="fa fa-linkedin"></i></a></p>
+                    </section>
+                </div>
+                <div class="member">
+                    <img src="{% static 'img/ewan.jpg' %}">
+                    <h3>Ewan Oglethorpe</h3>
+                    <section>
+                        <p>Advisor</p>
+                        <p><a href="https://github.com/eoglethorpe"><i class="fa fa-github"></i></a><a href="https://www.linkedin.com/in/ewan-oglethorpe-b5b12349"><i class="fa fa-linkedin"></i></a></p>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section id="contact">
+        </section>
+    </footer>
 </body>
 </html>

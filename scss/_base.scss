@@ -1,4 +1,5 @@
-$primary-color: #3498db;
+$primary-color: #e74c3c;
+$accent-color: #2980b9;
 
 
 body{
@@ -7,7 +8,12 @@ body{
     color: #414141;
 }
 
-a, a:hover, a:active, a:visited, a:focus{
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover, a:active, a:focus{
     text-decoration: none;
     color: $primary-color;
 }

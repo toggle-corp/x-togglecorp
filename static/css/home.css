@@ -3,124 +3,183 @@ body {
   background-color: #fafafa;
   color: #414141; }
 
-a, a:hover, a:active, a:visited, a:focus {
+a {
   text-decoration: none;
-  color: #3498db; }
+  color: #fff; }
+
+a:hover, a:active, a:focus {
+  text-decoration: none;
+  color: #e74c3c; }
 
 a, button, input[type="submit"], .btn {
   text-transform: uppercase; }
 
-body #wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  perspective: 1px;
-  overflow-x: hidden;
-  overflow-y: scroll; }
-  body #wrapper #parallax-group-1 {
-    position: relative;
-    transform-style: preserve-3d; }
-    body #wrapper #parallax-group-1 #background {
-      transform: translateZ(-1px) scale(2);
-      height: 100vh;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      background-image: url("../img/header-bg.jpg");
-      background-position: center center;
-      background-size: cover;
-      background-color: #717171;
-      background-blend-mode: multiply; }
-    body #wrapper #parallax-group-1 #foreground {
-      position: absolute;
-      top: 0;
-      width: 100%; }
-      body #wrapper #parallax-group-1 #foreground header {
-        height: 50vh;
-        color: #fff;
-        padding: 24px;
-        margin: 0; }
-        body #wrapper #parallax-group-1 #foreground header h1 {
-          text-transform: uppercase;
-          font-weight: 300; }
-          body #wrapper #parallax-group-1 #foreground header h1 span {
-            color: #5faee3; }
-        body #wrapper #parallax-group-1 #foreground header #logo {
-          width: 300px; }
-        body #wrapper #parallax-group-1 #foreground header #menu {
-          float: right; }
-          body #wrapper #parallax-group-1 #foreground header #menu a {
+body {
+  font-family: 'Montserrat'; }
+  body header {
+    background-color: transparent;
+    padding: 10px 24px;
+    width: 100%;
+    height: 56px;
+    z-index: 5000;
+    position: relative; }
+    body header h1 {
+      font-family: 'Roboto';
+      margin-top: 0;
+      padding-top: 4px;
+      display: inline-block;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 2em; }
+      body header h1 a:hover, body header h1 a:focus {
+        color: inherit; }
+      body header h1 a span {
+        color: #e74c3c;
+        font-weight: 600; }
+    body header #menu {
+      float: right;
+      display: inline-block;
+      text-align: center;
+      font-size: 1em;
+      margin-top: 8px;
+      font-weight: bold; }
+      body header #menu ul {
+        list-style-type: none; }
+        body header #menu ul li {
+          float: left; }
+          body header #menu ul li a {
             display: inline-block;
-            margin: 24px;
+            padding-right: 16px; }
+      body header #menu #toggle-menu {
+        display: none; }
+    @media screen and (max-width: 680px) {
+      body header {
+        background-color: #161719;
+        box-shadow: 2px 2px 2px rgba(9, 9, 10, 0.4); }
+        body header #menu ul {
+          position: absolute;
+          width: 100%;
+          background-color: #161719;
+          box-shadow: 2px 2px 2px rgba(9, 9, 10, 0.4);
+          top: 50px;
+          right: 0;
+          padding: 0;
+          overflow: hidden;
+          max-height: 0;
+          transition: max-height 1s; }
+          body header #menu ul li {
+            display: none;
+            float: none;
+            padding: 16px; }
+            body header #menu ul li a {
+              padding: 0;
+              display: block;
+              text-align: center; }
+        body header #menu #toggle-menu {
+          display: inline-block;
+          position: absolute;
+          top: 18px;
+          right: 36px; }
+          body header #menu #toggle-menu button {
+            background-color: transparent;
+            border: none;
             color: #fff; }
-        body #wrapper #parallax-group-1 #foreground header #intro {
-          font-family: 'Abel', sans-serif;
-          font-size: 3em;
-          color: white;
-          padding: 24px;
-          text-align: center; }
-        body #wrapper #parallax-group-1 #foreground header #extra {
-          text-align: center;
-          color: rgba(255, 255, 255, 0.6);
+        body header #menu ul.open {
+          max-height: 1000px;
+          transition: max-height 1s; }
+          body header #menu ul.open li {
+            display: block; } }
+  body .navbar-scrolled {
+    background-color: #161719;
+    box-shadow: 2px 2px 2px rgba(9, 9, 10, 0.4);
+    position: fixed;
+    top: -56px;
+    left: 0;
+    width: 100%;
+    animation: navbar-animation 0.5s ease-in-out forwards; }
+@keyframes navbar-animation {
+  from {
+    top: -56px; }
+  to {
+    top: 0; } }
+  body main #home {
+    background-image: url("../img/bg.png");
+    background-size: cover;
+    margin: 0;
+    margin-top: -56px;
+    padding-top: 112px;
+    padding-left: 24px;
+    min-height: 100vh; }
+    body main #home a {
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 5.5em; }
+      @media screen and (max-width: 680px) {
+        body main #home a {
+          font-size: 3em; } }
+    body main #home #we, body main #home #awesome {
+      color: #e74c3c; }
+    body main #home #do, body main #home #stuff {
+      font-weight: bold; }
+  body main #services {
+    min-height: 100vh;
+    padding-top: 56px;
+    background-color: #fff;
+    text-align: center; }
+    body main #services h2 {
+      font-size: 2em;
+      text-transform: uppercase; }
+    body main #services #service-list {
+      display: flex;
+      flex-wrap: wrap;
+      flex: 1 100%;
+      padding: 32px;
+      justify-content: space-around; }
+      body main #services #service-list .service {
+        flex-basis: 280px;
+        margin-top: 72px; }
+        body main #services #service-list .service h3 {
+          margin-top: 54px;
           font-size: 1.3em; }
-      body #wrapper #parallax-group-1 #foreground h2 {
-        font-weight: 300;
-        text-transform: uppercase; }
-      body #wrapper #parallax-group-1 #foreground #services {
-        background: linear-gradient(transparent, #3498db);
-        color: rgba(255, 255, 255, 0.8);
-        padding: 24px;
-        min-height: 50vh; }
-        body #wrapper #parallax-group-1 #foreground #services h2 {
-          color: #fff;
-          margin-bottom: 64px;
-          text-align: center; }
-        body #wrapper #parallax-group-1 #foreground #services .service {
-          text-align: center;
-          padding: 24px; }
-          body #wrapper #parallax-group-1 #foreground #services .service .fa {
-            margin-bottom: 32px; }
-          body #wrapper #parallax-group-1 #foreground #services .service h3 {
-            font-family: 'Abel', sans-serif; }
-      body #wrapper #parallax-group-1 #foreground #members {
-        padding: 24px;
-        background-color: #f5f5f5; }
-        body #wrapper #parallax-group-1 #foreground #members #member-list {
-          display: flex;
-          flex-wrap: wrap;
-          align-content: center;
-          justify-content: center; }
-        body #wrapper #parallax-group-1 #foreground #members h2 {
-          margin-bottom: 48px; }
-        body #wrapper #parallax-group-1 #foreground #members .member {
-          background-color: #fff;
-          text-align: center;
-          flex-basis: 360px;
+  body main #team {
+    min-height: 100vh;
+    padding-top: 56px;
+    background-color: #161719;
+    text-align: center; }
+    body main #team h2 {
+      color: #fafafa;
+      font-size: 2em;
+      text-transform: uppercase; }
+    body main #team #member-list {
+      display: flex;
+      flex-wrap: wrap;
+      flex: 1 100%;
+      padding: 32px;
+      padding-top: 0;
+      justify-content: space-around; }
+      body main #team #member-list .member {
+        position: relative;
+        margin: 16px;
+        flex-basis: 240px; }
+        body main #team #member-list .member img {
+          width: 100%; }
+        body main #team #member-list .member h3 {
           padding: 24px;
-          margin: 32px;
-          box-shadow: 0 2px 7px 1px rgba(0, 0, 0, 0.5); }
-          body #wrapper #parallax-group-1 #foreground #members .member img {
-            width: 256px; }
-          body #wrapper #parallax-group-1 #foreground #members .member .fa {
-            margin: 16px; }
-        @media screen and (min-width: 1367px) {
-          body #wrapper #parallax-group-1 #foreground #members .member {
-            margin: 10px;
-            flex-basis: 320px; } }
-      body #wrapper #parallax-group-1 #foreground #contact {
-        background-color: #fff;
-        padding: 24px; }
-        body #wrapper #parallax-group-1 #foreground #contact h2 {
-          margin-bottom: 54px; }
-        body #wrapper #parallax-group-1 #foreground #contact .fa {
-          width: 32px; }
-      body #wrapper #parallax-group-1 #foreground footer {
-        padding: 48px;
-        background-color: #414141;
-        color: #ddd;
-        font-weight: 500;
-        text-align: center; }
+          width: 100%;
+          margin: 0;
+          text-align: left;
+          background-color: rgba(0, 0, 0, 0.5);
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          color: #fff; }
+        body main #team #member-list .member section {
+          visibility: hidden;
+          position: absolute;
+          width: 100%;
+          bottom: 0;
+          color: #fff; }
+          body main #team #member-list .member section .fa {
+            padding: 8px; }
 
 /*# sourceMappingURL=home.css.map */
