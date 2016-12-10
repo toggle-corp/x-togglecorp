@@ -189,6 +189,6 @@ main {
         height: calc(100vh - 24px);
     }
     header {
-        width: 100%;
+        width: calc(100% - 60px);
     }
 }
