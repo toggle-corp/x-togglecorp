@@ -12,9 +12,6 @@ a:hover, a:active, a:focus {
   text-decoration: none;
   color: #e74c3c; }
 
-a, button, input[type="submit"], .btn {
-  text-transform: uppercase; }
-
 body {
   font-family: 'Montserrat'; }
   body header {
@@ -50,7 +47,8 @@ body {
           float: left; }
           body header #menu ul li a {
             display: inline-block;
-            padding-right: 16px; }
+            padding-right: 16px;
+            text-transform: uppercase; }
       body header #menu #toggle-menu {
         display: none; }
     @media screen and (max-width: 680px) {
@@ -105,6 +103,7 @@ body {
     top: 0; } }
   body main #home {
     background-image: url("../img/bg.png");
+    background-color: #414141;
     background-size: cover;
     margin: 0;
     margin-top: -56px;
@@ -134,14 +133,18 @@ body {
       display: flex;
       flex-wrap: wrap;
       flex: 1 100%;
-      padding: 32px;
+      padding: 16px;
       justify-content: space-around; }
       body main #services #service-list .service {
         flex-basis: 280px;
-        margin-top: 72px; }
+        margin-top: 56px; }
         body main #services #service-list .service h3 {
-          margin-top: 54px;
+          margin-top: 32px;
           font-size: 1.3em; }
+        body main #services #service-list .service img {
+          width: 96px; }
+        body main #services #service-list .service a {
+          color: inherit; }
   body main #team {
     min-height: 100vh;
     padding-top: 56px;
@@ -189,17 +192,52 @@ body {
           overflow: hidden;
           text-align: left;
           height: 56px;
-          color: #fff;
           transition: all 0.2s ease-in; }
           body main #team #member-list .member section p {
+            color: rgba(255, 255, 255, 0.9);
             padding-left: 12px;
             text-align: left; }
           body main #team #member-list .member section .fa {
+            color: rgba(255, 255, 255, 0.9);
             padding-left: 12px; }
         body main #team #member-list .member:hover h3, body main #team #member-list .member:active h3 {
           bottom: 56px; }
         body main #team #member-list .member:hover section, body main #team #member-list .member:active section {
           bottom: 0; }
+  body footer #contact {
+    padding-top: 56px;
+    padding-left: 24px;
+    padding-right: 24px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #eee;
+    background-color: #414141; }
+    body footer #contact #contact-wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center; }
+      body footer #contact #contact-wrapper h2 {
+        margin-bottom: 24px;
+        text-transform: uppercase; }
+      body footer #contact #contact-wrapper i {
+        padding-right: 8px; }
+      body footer #contact #contact-wrapper section {
+        margin-top: 8px;
+        margin-bottom: 8px; }
+      body footer #contact #contact-wrapper #contact-info {
+        flex-basis: 300px; }
+      body footer #contact #contact-wrapper #the-map {
+        flex-basis: 700px; }
+        body footer #contact #contact-wrapper #the-map iframe {
+          width: 100%;
+          height: 450px;
+          box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.5); }
+      body footer #contact #contact-wrapper h3 {
+        padding-top: 16px; }
 
 @media screen and (min-width: 1366px) {
   #member-list .member {

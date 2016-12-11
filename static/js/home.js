@@ -21,9 +21,12 @@ $(document).ready(function(){
         }
     });
 
-    $("#home-wrapper").css("padding-top",($('#home').height()-$("#home-wrapper").height())/2);
-    $("#services-wrapper").css("padding-top",($('#services').height()-$("#services-wrapper").height())/2);
-    $("#team-wrapper").css("padding-top",($('#team').height()-$("#team-wrapper").height())/2);
+    window.onresize = function() {
+        $("#home-wrapper").css("padding-top",($('#home').height()-$("#home-wrapper").height())/2);
+        $("#services-wrapper").css("padding-top",($('#services').height()-$("#services-wrapper").height())/2);
+        $("#team-wrapper").css("padding-top",($('#team').height()-$("#team-wrapper").height())/2);
+    }
+    window.onresize();
 
 
     $(function() {

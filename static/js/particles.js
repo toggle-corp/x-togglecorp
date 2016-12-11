@@ -15,17 +15,17 @@ var particles = [];
 
 function initParticles() {
     var canvas = document.getElementById("the-canvas");
-    
+
     // Create particles uniformly with random velocities
     particles = [];
     var numCols = 6;
     var numRows = 6;
     for (var i=0; i<numCols; i++) {
         for (var j=0; j<numRows; j++) {
-            
+
             var x = i / numCols * canvas.width + canvas.width/numCols*0.5 * (j%2);
             var y = j / numRows * canvas.height;
-            
+
             var vx = (Math.random()*2-1)/2;
             var vy = (Math.random()*2-1)/2;
             var va = (Math.random()*2-1)*1.23;
@@ -35,7 +35,7 @@ function initParticles() {
             var sides = 6; //parseInt(Math.random()*(6-3)+3);
             var alpha = Math.random()*0.5;
             var valpha = 0.004*0.5;
-            
+
             particles.push({
                 x: x + canvas.width/numCols*0.25, y: y + canvas.height/numRows*0.25,
                 vx: vx, vy: vy, angle: angle, va: va,
@@ -50,7 +50,7 @@ function draw() {
     var canvas = document.getElementById("the-canvas");
     var context = canvas.getContext("2d");
     context.clearRect(0, 0, canvas.width, canvas.height);
-    
+
     for (var i=0; i<particles.length; i++) {
         var particle = particles[i];
         // Draw each particle
@@ -62,16 +62,16 @@ function draw() {
         context.rotate(particle.angle*Math.PI/180);
         context.scale(particle.sx, particle.sy);
         // context.fillRect(-4, -4, 8, 8);
-        
+
         context.beginPath();
-        context.moveTo (-4 +  8 * Math.cos(0), -4 +  8 *  Math.sin(0));          
+        context.moveTo (-4 +  8 * Math.cos(0), -4 +  8 *  Math.sin(0));
         for (var k=1; k <= particle.sides; k++) {
             context.lineTo (-4 + 8 * Math.cos(k * 2 * Math.PI / particle.sides), -4 + 8 * Math.sin(k * 2 * Math.PI / particle.sides));
         }
         context.fill();
-        
+
         context.restore();
-        
+
         // For connectors, connect with three nearest points
         if (particle.connector) {
             var minDist1 = canvas.width;
@@ -83,7 +83,7 @@ function draw() {
                     minParticle1 = particles[j];
                 }
             }
-            
+
             var minDist2 = canvas.width;
             var minParticle2;
             for (var j=0; j<particles.length; j++) {
@@ -93,7 +93,7 @@ function draw() {
                     minParticle2 = particles[j];
                 }
             }
-            
+
             var minDist3 = canvas.width;
             var minParticle3;
             for (var j=0; j<particles.length; j++) {
@@ -103,12 +103,12 @@ function draw() {
                     minParticle3 = particles[j];
                 }
             }
-        
+
             context.beginPath();
             context.strokeStyle = 'rgba(255,255,255,0.02)';
             if (minParticle1) {
                 context.moveTo(particle.x, particle.y);
-                context.lineTo(minParticle1.x, minParticle1.y); 
+                context.lineTo(minParticle1.x, minParticle1.y);
             }
             if (minParticle2) {
                 context.moveTo(particle.x, particle.y);
@@ -118,9 +118,9 @@ function draw() {
                 context.moveTo(particle.x, particle.y);
                 context.lineTo(minParticle3.x, minParticle3.y);
             }
-            context.stroke(); 
-        } 
-        
+            context.stroke();
+        }
+
         // Animate by velocity
         particle.x += particle.vx;
         particle.y += particle.vy;
@@ -129,11 +129,11 @@ function draw() {
         if (particle.y < 0 || particle.y >= canvas.height)
             particle.vy *= -1;
         particle.angle += particle.va;
-        
+
         particle.alpha += particle.valpha;
         if (particle.alpha <= 0 || particle.alpha >= 0.5)
             particle.valpha *= -1;
     }
 
-    window.setTimeout(draw, 1000/60); 
+    window.setTimeout(draw, 1000/60);
 }
