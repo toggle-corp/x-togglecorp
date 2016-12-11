@@ -132,7 +132,6 @@ body{
             background-size: cover;
             margin: 0;
             margin-top: -56px;
-            padding-top: 112px;
             padding-left: 24px;
             min-height: 100vh;
 
@@ -162,6 +161,7 @@ body{
             h2{
                 font-size: 2em;
                 text-transform: uppercase;
+                margin-bottom: 20px;
             }
 
             #service-list{
@@ -185,12 +185,13 @@ body{
         #team{
             min-height: 100vh;
             padding-top: 56px;
-            background-color: #161719;
+            background-color: #eee;
             text-align: center;
 
             h2{
-                color: #fafafa;
+                color: #161719;
                 font-size: 2em;
+                margin-bottom: 20px;
                 text-transform: uppercase;
             }
             #member-list{
@@ -207,9 +208,11 @@ body{
                     margin: 16px;
                     flex-basis: 240px;
                     overflow: hidden;
+                    box-shadow: 0 7px 15px -8px rgba(0, 0, 0, 1);
 
                     img{
                         width: 100%;
+                        transition: all 0.2s ease-in-out;
                     }
                     h3{
                         padding: 12px;
@@ -243,7 +246,7 @@ body{
                             padding-left: 12px;
                         }
                     }
-                    &:hover {
+                    &:hover, &:active {
                         h3{
                             bottom: 56px;
                         }
@@ -252,64 +255,30 @@ body{
                         }
                     }
                 }
+
             }
         }
     }
 }
-// #member-list{
-//     display: flex;
-//     align-content: center;
-//     justify-content: center;
-// }
-// .member{
-//     background-color: #fff;
-//     position: relative;
-//     text-align: center;
-//     flex-basis: 256px;
-//     padding: 0;
-//     margin: 64px;
-//     box-shadow: 0 2px 7px 1px rgba(0, 0, 0, 0.5);
-//
-//     img{
-//         width: 100%;
-//     }
-//     .member-details{
-//         p{
-//             margin-bottom: 0;
-//             font-size: 0.8em;
-//         }
-//         .fa{
-//             font-size: 1.4em;
-//             margin: 16px;
-//             color: #111;
-//         }
-//     }
-//     .hover-text{
-//         position: absolute;
-//         top: 0;
-//         background-color: transparent;
-//     }
-// }
-// @media screen and (max-width: 650px) {
-//     .member{
-//         margin: 8px;
-//         flex-basis: 160px;
-//
-//         h3{
-//             font-size: 0.7em;
-//         }
-//         img{
-//             width: 100%;
-//         }
-//         .member-details{
-//             p{
-//                 font-size: 0.6em;
-//                 margin-bottom: 4px;
-//             }
-//             .fa{
-//                 margin: 4px;
-//                 color: #000;
-//             }
-//         }
-//     }
-// }
+@media screen and (min-width: 1366px){
+    #member-list{
+        .member{
+            flex-basis: 300px !important;
+            height: 480px !important;
+            object-fit: cover !important;
+
+            img{
+                margin-left: -25%;
+                width: inherit!important;
+                height: 100%;
+                transform-origin: center;
+                transform: scale(1.1);
+            }
+            &:hover, &:active {
+                img{
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}
