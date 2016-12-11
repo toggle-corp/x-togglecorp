@@ -36,7 +36,16 @@ $(document).ready(function(){
         });
     });
 
-
+    // $('.member section').hide();
+    //
+    // $('.member').hover(
+    //     function () {
+    //         $(this).find('section').fadeIn();
+    //     },
+    //     function () {
+    //         $(this).find('section').fadeOut();
+    //     }
+    // );
 
     // Close menu when a nav item is selected
     $('#menu ul a').click(function() {

@@ -198,6 +198,7 @@ body{
                 flex-wrap: wrap;
                 flex: 1 100%;
                 padding:32px;
+                font-family: 'Montserrat';
                 padding-top: 0;
                 justify-content: space-around;
 
@@ -205,33 +206,49 @@ body{
                     position: relative;
                     margin: 16px;
                     flex-basis: 240px;
+                    overflow: hidden;
 
                     img{
                         width: 100%;
                     }
                     h3{
-                        padding: 24px;
+                        padding: 12px;
                         width: 100%;
                         margin: 0;
                         text-align: left;
                         background-color: rgba(0,0,0,0.5);
+                        font-size: 1.3em;
                         position: absolute;
                         left: 0;
                         bottom: 0;
                         color: #fff;
+                        transition: all 0.2s ease-in;
                     }
                     section{
-                        visibility: hidden;
                         position: absolute;
+                        background-color: rgba(0,0,0,0.5);
                         width: 100%;
-                        bottom: 0;
+                        bottom: -56px;
+                        overflow: hidden;
+                        text-align: left;
+                        height: 56px;
                         color: #fff;
+                        transition: all 0.2s ease-in;
 
                         p{
-
+                            padding-left: 12px;
+                            text-align: left;
                         }
                         .fa{
-                            padding: 8px;
+                            padding-left: 12px;
+                        }
+                    }
+                    &:hover {
+                        h3{
+                            bottom: 56px;
+                        }
+                        section{
+                            bottom: 0;
                         }
                     }
                 }

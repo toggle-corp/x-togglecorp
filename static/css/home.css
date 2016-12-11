@@ -155,31 +155,46 @@ body {
       flex-wrap: wrap;
       flex: 1 100%;
       padding: 32px;
+      font-family: 'Montserrat';
       padding-top: 0;
       justify-content: space-around; }
       body main #team #member-list .member {
         position: relative;
         margin: 16px;
-        flex-basis: 240px; }
+        flex-basis: 240px;
+        overflow: hidden; }
         body main #team #member-list .member img {
           width: 100%; }
         body main #team #member-list .member h3 {
-          padding: 24px;
+          padding: 12px;
           width: 100%;
           margin: 0;
           text-align: left;
           background-color: rgba(0, 0, 0, 0.5);
+          font-size: 1.3em;
           position: absolute;
           left: 0;
           bottom: 0;
-          color: #fff; }
+          color: #fff;
+          transition: all 0.2s ease-in; }
         body main #team #member-list .member section {
-          visibility: hidden;
           position: absolute;
+          background-color: rgba(0, 0, 0, 0.5);
           width: 100%;
-          bottom: 0;
-          color: #fff; }
+          bottom: -56px;
+          overflow: hidden;
+          text-align: left;
+          height: 56px;
+          color: #fff;
+          transition: all 0.2s ease-in; }
+          body main #team #member-list .member section p {
+            padding-left: 12px;
+            text-align: left; }
           body main #team #member-list .member section .fa {
-            padding: 8px; }
+            padding-left: 12px; }
+        body main #team #member-list .member:hover h3 {
+          bottom: 56px; }
+        body main #team #member-list .member:hover section {
+          bottom: 0; }
 
 /*# sourceMappingURL=home.css.map */
