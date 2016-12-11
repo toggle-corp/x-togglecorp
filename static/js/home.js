@@ -21,6 +21,11 @@ $(document).ready(function(){
         }
     });
 
+    $("#home-wrapper").css("padding-top",($('#home').height()-$("#home-wrapper").height())/2);
+    $("#services-wrapper").css("padding-top",($('#services').height()-$("#services-wrapper").height())/2);
+    $("#team-wrapper").css("padding-top",($('#team').height()-$("#team-wrapper").height())/2);
+
+
     $(function() {
         $('a[href*="#"]:not([href="#"])').click(function() {
             if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -35,17 +40,6 @@ $(document).ready(function(){
             }
         });
     });
-
-    // $('.member section').hide();
-    //
-    // $('.member').hover(
-    //     function () {
-    //         $(this).find('section').fadeIn();
-    //     },
-    //     function () {
-    //         $(this).find('section').fadeOut();
-    //     }
-    // );
 
     // Close menu when a nav item is selected
     $('#menu ul a').click(function() {

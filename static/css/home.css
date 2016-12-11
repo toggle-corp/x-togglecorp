@@ -5,6 +5,7 @@ body {
 
 a {
   text-decoration: none;
+  transition: all 0.2s ease-in-out;
   color: #fff; }
 
 a:hover, a:active, a:focus {
@@ -107,7 +108,6 @@ body {
     background-size: cover;
     margin: 0;
     margin-top: -56px;
-    padding-top: 112px;
     padding-left: 24px;
     min-height: 100vh; }
     body main #home a {
@@ -128,7 +128,8 @@ body {
     text-align: center; }
     body main #services h2 {
       font-size: 2em;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      margin-bottom: 20px; }
     body main #services #service-list {
       display: flex;
       flex-wrap: wrap;
@@ -144,11 +145,12 @@ body {
   body main #team {
     min-height: 100vh;
     padding-top: 56px;
-    background-color: #161719;
+    background-color: #eee;
     text-align: center; }
     body main #team h2 {
-      color: #fafafa;
+      color: #161719;
       font-size: 2em;
+      margin-bottom: 20px;
       text-transform: uppercase; }
     body main #team #member-list {
       display: flex;
@@ -162,9 +164,11 @@ body {
         position: relative;
         margin: 16px;
         flex-basis: 240px;
-        overflow: hidden; }
+        overflow: hidden;
+        box-shadow: 0 7px 15px -8px black; }
         body main #team #member-list .member img {
-          width: 100%; }
+          width: 100%;
+          transition: all 0.2s ease-in-out; }
         body main #team #member-list .member h3 {
           padding: 12px;
           width: 100%;
@@ -192,9 +196,23 @@ body {
             text-align: left; }
           body main #team #member-list .member section .fa {
             padding-left: 12px; }
-        body main #team #member-list .member:hover h3 {
+        body main #team #member-list .member:hover h3, body main #team #member-list .member:active h3 {
           bottom: 56px; }
-        body main #team #member-list .member:hover section {
+        body main #team #member-list .member:hover section, body main #team #member-list .member:active section {
           bottom: 0; }
+
+@media screen and (min-width: 1366px) {
+  #member-list .member {
+    flex-basis: 300px !important;
+    height: 480px !important;
+    object-fit: cover !important; }
+    #member-list .member img {
+      margin-left: -25%;
+      width: inherit !important;
+      height: 100%;
+      transform-origin: center;
+      transform: scale(1.1); }
+    #member-list .member:hover img, #member-list .member:active img {
+      transform: scale(1); } }
 
 /*# sourceMappingURL=home.css.map */
