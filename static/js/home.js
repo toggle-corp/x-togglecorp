@@ -19,16 +19,24 @@ $(document).ready(function(){
                 });
             }
         }
+        if (scrollPos > 0 && scrollPos < ($('#services').position().top)){
+                $('.active').removeClass('active');
+            }
+        else if (scrollPos > ($('#services').position().top - 200) && scrollPos < ($('#team').position().top - 200)){
+                $('.active').removeClass('active');
+                $('#services-menu').addClass('active');
+            }
+        else if (scrollPos > ($('#team').position().top - 200) && scrollPos < ($('#contact').position().top - 200)){
+                $('.active').removeClass('active');
+                $('#team-menu').addClass('active');
+            }
+        else if (scrollPos > ($('#contact').position().top - 200)){
+                $('.active').removeClass('active');
+                $('#contact-menu').addClass('active');
+            }
     });
 
-    var onResize = function() {
-        $("#home-wrapper").css("padding-top",($('#home').height()-$("#home-wrapper").height())/2);
-        $("#services-wrapper").css("padding-top",($('#services').height()-$("#services-wrapper").height())/2);
-        $("#team-wrapper").css("padding-top",($('#team').height()-$("#team-wrapper").height())/2);
-    }
-    onResize();
-    window.onresize = onResize;
-
+    
 
     $(function() {
         $('a[href*="#"]:not([href="#"])').click(function() {

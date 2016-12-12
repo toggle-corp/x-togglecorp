@@ -27,9 +27,9 @@
                 <button href="javascript:void(0);" style="font-size:15px;" onclick="toggleMenu()">☰</button>
             </div>
             <ul>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#team">The team</a></li>
-                <li><a href="#contact">Contact Us</a></li>
+                <li><a id ="services-menu" href="#services">Services</a></li>
+                <li><a id ="team-menu" href="#team">The team</a></li>
+                <li><a id ="contact-menu" href="#contact">Contact Us</a></li>
             </ul>
         </div>
     </header>
@@ -37,10 +37,12 @@
     <main>
         <section id="home">
             <div id="home-wrapper">
-                <a id="we" href="#team">We</a><br>
-                <a id="do" href="#services">Do</a><br>
-                <a id="awesome" href="#team">Awesome</a><br>
-                <a id="stuff" href="{% url 'mobile_apps' %}">Stuff</a>
+                <div>
+                    <a id="we" href="#team">We</a><br>
+                    <a id="do" href="#services">Do</a><br>
+                    <a id="awesome" href="#team">Awesome</a><br>
+                    <a id="stuff" href="{% url 'mobile_apps' %}">Stuff</a>
+                </div>
             </div>
         </section>
         <section id="services">
