@@ -19,7 +19,7 @@ $(document).ready(function(){
                 });
             }
         }
-        if (scrollPos > 0 && scrollPos < ($('#services').position().top)){
+        if (scrollPos > 0 && scrollPos < ($('#services').position().top - 200)){
                 $('.active').removeClass('active');
             }
         else if (scrollPos > ($('#services').position().top - 200) && scrollPos < ($('#team').position().top - 200)){
@@ -36,7 +36,7 @@ $(document).ready(function(){
             }
     });
 
-    
+
 
     $(function() {
         $('a[href*="#"]:not([href="#"])').click(function() {

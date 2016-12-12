@@ -110,117 +110,115 @@ body {
     margin: 0;
     margin-top: -56px;
     padding-left: 24px;
-    min-height: 100vh;
-    position: relative; }
-    body main #home #home-wrapper {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%); }
-      body main #home #home-wrapper a {
+    min-height: 100vh; }
+    body main #home #wrapper-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 100vh; }
+      body main #home #wrapper-wrapper #home-wrapper a {
         color: #fff;
         text-transform: uppercase;
         font-size: 5.5em; }
         @media screen and (max-width: 680px) {
-          body main #home #home-wrapper a {
-            font-size: 3em; } }
-      body main #home #home-wrapper #we, body main #home #home-wrapper #awesome {
+          body main #home #wrapper-wrapper #home-wrapper a {
+            font-size: 3.5em; } }
+      body main #home #wrapper-wrapper #home-wrapper #we, body main #home #wrapper-wrapper #home-wrapper #awesome {
         color: #e74c3c; }
-      body main #home #home-wrapper #do, body main #home #home-wrapper #stuff {
+      body main #home #wrapper-wrapper #home-wrapper #do, body main #home #wrapper-wrapper #home-wrapper #stuff {
         font-weight: bold; }
   body main #services {
     min-height: 100vh;
     padding-top: 56px;
     background-color: #fff;
     text-align: center;
-    position: relative; }
-    body main #services #services-wrapper {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%); }
-      body main #services #services-wrapper h2 {
-        font-size: 2em;
-        text-transform: uppercase;
-        margin-bottom: 20px; }
-      body main #services #services-wrapper #service-list {
-        display: flex;
-        flex-wrap: wrap;
-        flex: 1 100%;
-        padding: 16px;
-        justify-content: space-around; }
-        body main #services #services-wrapper #service-list .service {
-          flex-basis: 280px;
-          margin-top: 56px; }
-          body main #services #services-wrapper #service-list .service h3 {
-            margin-top: 32px;
-            font-size: 1.3em; }
-          body main #services #services-wrapper #service-list .service img {
-            width: 96px; }
-          body main #services #services-wrapper #service-list .service a {
-            color: inherit; }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    body main #services #services-wrapper h2 {
+      font-size: 2em;
+      text-transform: uppercase;
+      margin-bottom: 20px; }
+    body main #services #services-wrapper #service-list {
+      display: flex;
+      flex-wrap: wrap;
+      flex: 1 100%;
+      padding: 16px;
+      justify-content: space-around; }
+      body main #services #services-wrapper #service-list .service {
+        flex-basis: 280px;
+        margin-top: 56px; }
+        body main #services #services-wrapper #service-list .service h3 {
+          margin-top: 32px;
+          font-size: 1.3em; }
+        body main #services #services-wrapper #service-list .service img {
+          width: 96px; }
+        body main #services #services-wrapper #service-list .service a {
+          color: inherit; }
   body main #team {
     min-height: 100vh;
     padding-top: 56px;
     background-color: #eee;
     text-align: center;
-    position: relative; }
-    body main #team #team-wrapper {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%); }
-      body main #team #team-wrapper h2 {
-        color: #161719;
-        font-size: 2em;
-        margin-bottom: 20px;
-        text-transform: uppercase; }
-      body main #team #team-wrapper #member-list {
-        display: flex;
-        flex-wrap: wrap;
-        flex: 1 100%;
-        padding: 32px;
-        font-family: 'Montserrat';
-        padding-top: 0;
-        justify-content: space-around; }
-        body main #team #team-wrapper #member-list .member {
-          position: relative;
-          margin: 16px;
-          flex-basis: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    body main #team #team-wrapper h2 {
+      color: #161719;
+      font-size: 2em;
+      margin-bottom: 20px;
+      text-transform: uppercase; }
+    body main #team #team-wrapper #member-list {
+      display: flex;
+      flex-wrap: wrap;
+      flex: 1 100%;
+      padding: 32px;
+      font-family: 'Montserrat';
+      padding-top: 0;
+      justify-content: space-around; }
+      body main #team #team-wrapper #member-list .member {
+        position: relative;
+        margin: 16px;
+        flex-basis: 240px;
+        overflow: hidden;
+        box-shadow: 0 7px 15px -8px black; }
+        body main #team #team-wrapper #member-list .member img {
+          width: 100%;
+          transition: all 0.2s ease-in-out; }
+        body main #team #team-wrapper #member-list .member h3 {
+          padding: 12px;
+          width: 100%;
+          margin: 0;
+          text-align: left;
+          background-color: rgba(0, 0, 0, 0.5);
+          font-size: 1.3em;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          color: #fff;
+          transition: all 0.2s ease-in; }
+        body main #team #team-wrapper #member-list .member section {
+          position: absolute;
+          background-color: rgba(0, 0, 0, 0.5);
+          width: 100%;
+          bottom: -56px;
           overflow: hidden;
-          box-shadow: 0 7px 15px -8px black; }
-          body main #team #team-wrapper #member-list .member img {
-            width: 100%;
-            transition: all 0.2s ease-in-out; }
-          body main #team #team-wrapper #member-list .member h3 {
-            padding: 12px;
-            width: 100%;
-            margin: 0;
-            text-align: left;
-            background-color: rgba(0, 0, 0, 0.5);
-            font-size: 1.3em;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            color: #fff;
-            transition: all 0.2s ease-in; }
-          body main #team #team-wrapper #member-list .member section {
-            position: absolute;
-            background-color: rgba(0, 0, 0, 0.5);
-            width: 100%;
-            bottom: -56px;
-            overflow: hidden;
-            text-align: left;
-            height: 56px;
-            transition: all 0.2s ease-in; }
-            body main #team #team-wrapper #member-list .member section p {
-              color: rgba(255, 255, 255, 0.9);
-              padding-left: 12px;
-              text-align: left; }
-            body main #team #team-wrapper #member-list .member section .fa {
-              color: rgba(255, 255, 255, 0.9);
-              padding-left: 12px; }
-          body main #team #team-wrapper #member-list .member:hover h3, body main #team #team-wrapper #member-list .member:active h3 {
-            bottom: 56px; }
-          body main #team #team-wrapper #member-list .member:hover section, body main #team #team-wrapper #member-list .member:active section {
-            bottom: 0; }
+          text-align: left;
+          height: 56px;
+          transition: all 0.2s ease-in; }
+          body main #team #team-wrapper #member-list .member section p {
+            color: rgba(255, 255, 255, 0.9);
+            padding-left: 12px;
+            text-align: left; }
+          body main #team #team-wrapper #member-list .member section .fa {
+            color: rgba(255, 255, 255, 0.9);
+            padding-left: 12px; }
+        body main #team #team-wrapper #member-list .member:hover h3, body main #team #team-wrapper #member-list .member:active h3 {
+          bottom: 56px; }
+        body main #team #team-wrapper #member-list .member:hover section, body main #team #team-wrapper #member-list .member:active section {
+          bottom: 0; }
   body footer #contact {
     padding-top: 56px;
     padding-left: 24px;

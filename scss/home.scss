@@ -140,27 +140,30 @@ body{
             margin-top: -56px;
             padding-left: 24px;
             min-height: 100vh;
-            position: relative;
 
-            #home-wrapper {
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
 
-                a{
-                    color: #fff;
-                    text-transform: uppercase;
-                    font-size: 5.5em;
+            #wrapper-wrapper{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                min-height: 100vh;
 
-                    @media screen and (max-width:680px){
-                        font-size: 3em;
+                #home-wrapper {
+                    a{
+                        color: #fff;
+                        text-transform: uppercase;
+                        font-size: 5.5em;
+
+                        @media screen and (max-width:680px){
+                            font-size: 3.5em;
+                        }
                     }
-                }
-                #we, #awesome{
-                    color: $primary-color;
-                }
-                #do, #stuff{
-                    font-weight: bold;
+                    #we, #awesome{
+                        color: $primary-color;
+                    }
+                    #do, #stuff{
+                        font-weight: bold;
+                    }
                 }
             }
 
@@ -170,12 +173,12 @@ body{
             padding-top: 56px;
             background-color: #fff;
             text-align: center;
-            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
             #services-wrapper{
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
 
                 h2{
                     font-size: 2em;
@@ -216,13 +219,12 @@ body{
             padding-top: 56px;
             background-color: #eee;
             text-align: center;
-            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
             #team-wrapper{
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-
                 h2{
                     color: #161719;
                     font-size: 2em;
