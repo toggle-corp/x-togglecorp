@@ -1,272 +1,106 @@
 body {
-  font-family: 'Libre Franklin', sans-serif;
-  background-color: #fafafa;
-  color: #414141; }
+  margin: 0;
+  background-color: #f5f5f5;
+  font-family: 'Lato', sans-serif;
+  color: #414141;
+  font-weight: 400;
+  line-height: 1.5;
+  max-width: 100vw;
+  overflow-x: hidden; }
 
 a {
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-  color: #fff; }
+  text-decoration: none; }
 
 a:hover, a:focus, a:active {
-  text-decoration: none;
-  color: #fff; }
+  text-decoration: none; }
 
-body {
-  font-family: 'Montserrat'; }
-  body .active {
-    color: #e74c3c; }
-  body header {
-    background-color: transparent;
-    padding: 10px 24px;
-    width: 100%;
-    height: 56px;
-    z-index: 5000;
-    position: relative; }
-    body header h1 {
-      font-family: 'Roboto';
-      margin-top: 0;
-      padding-top: 4px;
-      display: inline-block;
-      color: #fff;
-      text-transform: uppercase;
-      font-size: 2em; }
-      body header h1 a:hover, body header h1 a:focus {
-        color: inherit; }
-      body header h1 a span {
-        color: #e74c3c;
-        font-weight: 600; }
-    body header #menu {
-      float: right;
-      display: inline-block;
-      text-align: center;
-      font-size: 1em;
-      margin-top: 8px;
-      font-weight: bold; }
-      body header #menu ul {
-        list-style-type: none; }
-        body header #menu ul li {
-          float: left; }
-          body header #menu ul li a {
-            display: inline-block;
-            padding-right: 16px;
-            text-transform: uppercase; }
-      body header #menu #toggle-menu {
-        display: none; }
-    @media screen and (max-width: 680px) {
-      body header {
-        background-color: #161719;
-        box-shadow: 2px 2px 2px rgba(9, 9, 10, 0.4); }
-        body header #menu ul {
-          position: absolute;
-          width: 100%;
-          background-color: #161719;
-          box-shadow: 2px 2px 2px rgba(9, 9, 10, 0.4);
-          top: 50px;
-          right: 0;
-          padding: 0;
-          overflow: hidden;
-          max-height: 0;
-          transition: max-height 1s; }
-          body header #menu ul li {
-            display: none;
-            float: none;
-            padding: 16px; }
-            body header #menu ul li a {
-              padding: 0;
-              display: block;
-              text-align: center; }
-        body header #menu #toggle-menu {
-          display: inline-block;
-          position: absolute;
-          top: 18px;
-          right: 36px; }
-          body header #menu #toggle-menu button {
-            background-color: transparent;
-            border: none;
-            color: #fff; }
-        body header #menu ul.open {
-          max-height: 1000px;
-          transition: max-height 1s; }
-          body header #menu ul.open li {
-            display: block; } }
-  body .navbar-scrolled {
-    background-color: #161719;
-    box-shadow: 2px 2px 2px rgba(9, 9, 10, 0.4);
-    position: fixed;
-    top: -56px;
-    left: 0;
-    width: 100%;
-    animation: navbar-animation 0.5s ease-in-out forwards; }
-@keyframes navbar-animation {
-  from {
-    top: -56px; }
-  to {
-    top: 0; } }
-  body main #home {
-    background-image: url("../img/bg_2_2.jpg");
-    background-color: #717171;
-    background-blend-mode: multiply;
-    background-size: cover;
+body header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #717171;
+  background-image: url("../img/bg.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  color: #fff;
+  text-align: center; }
+  body header h1 {
+    font-size: 6em;
+    text-transform: uppercase;
+    font-weight: 100;
+    margin-bottom: 16px; }
+    body header h1 strong {
+      font-weight: 300;
+      color: rgba(231, 76, 60, 0.8); }
+  body header p {
+    font-size: 2em;
+    font-weight: 300;
     margin: 0;
-    margin-top: -56px;
-    padding-left: 24px;
-    min-height: 100vh; }
-    body main #home #wrapper-wrapper {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      min-height: 100vh; }
-      body main #home #wrapper-wrapper #home-wrapper a {
-        color: #fff;
-        text-transform: uppercase;
-        font-size: 5.5em; }
-        @media screen and (max-width: 680px) {
-          body main #home #wrapper-wrapper #home-wrapper a {
-            font-size: 3.5em; } }
-      body main #home #wrapper-wrapper #home-wrapper #we, body main #home #wrapper-wrapper #home-wrapper #awesome {
-        color: #e74c3c; }
-      body main #home #wrapper-wrapper #home-wrapper #do, body main #home #wrapper-wrapper #home-wrapper #stuff {
-        font-weight: bold; }
-  body main #services {
-    min-height: 100vh;
-    padding-top: 56px;
-    background-color: #fff;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-    body main #services #services-wrapper h2 {
-      font-size: 2em;
-      text-transform: uppercase;
-      margin-bottom: 20px; }
-    body main #services #services-wrapper #service-list {
-      display: flex;
-      flex-wrap: wrap;
-      flex: 1 100%;
-      padding: 16px;
-      justify-content: space-around; }
-      body main #services #services-wrapper #service-list .service {
-        flex-basis: 280px;
-        margin-top: 56px; }
-        body main #services #services-wrapper #service-list .service h3 {
-          margin-top: 32px;
-          font-size: 1.3em; }
-        body main #services #services-wrapper #service-list .service img {
-          width: 96px; }
-        body main #services #services-wrapper #service-list .service a {
-          color: inherit; }
-  body main #team {
-    min-height: 100vh;
-    padding-top: 56px;
-    background-color: #eee;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-    body main #team #team-wrapper h2 {
-      color: #161719;
-      font-size: 2em;
-      margin-bottom: 20px;
-      text-transform: uppercase; }
-    body main #team #team-wrapper #member-list {
-      display: flex;
-      flex-wrap: wrap;
-      flex: 1 100%;
-      padding: 32px;
-      font-family: 'Montserrat';
-      padding-top: 0;
-      justify-content: space-around; }
-      body main #team #team-wrapper #member-list .member {
-        position: relative;
-        margin: 16px;
-        flex-basis: 240px;
-        overflow: hidden;
-        box-shadow: 0 7px 15px -8px black; }
-        body main #team #team-wrapper #member-list .member img {
-          width: 100%;
-          transition: all 0.2s ease-in-out; }
-        body main #team #team-wrapper #member-list .member h3 {
-          padding: 12px;
-          width: 100%;
-          margin: 0;
-          text-align: left;
-          background-color: rgba(0, 0, 0, 0.5);
-          font-size: 1.3em;
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          color: #fff;
-          transition: all 0.2s ease-in; }
-        body main #team #team-wrapper #member-list .member section {
-          position: absolute;
-          background-color: rgba(0, 0, 0, 0.5);
-          width: 100%;
-          bottom: -56px;
-          overflow: hidden;
-          text-align: left;
-          height: 56px;
-          transition: all 0.2s ease-in; }
-          body main #team #team-wrapper #member-list .member section p {
-            color: rgba(255, 255, 255, 0.9);
-            padding-left: 12px;
-            text-align: left; }
-          body main #team #team-wrapper #member-list .member section .fa {
-            color: rgba(255, 255, 255, 0.9);
-            padding-left: 12px; }
-        body main #team #team-wrapper #member-list .member:hover h3, body main #team #team-wrapper #member-list .member:active h3 {
-          bottom: 56px; }
-        body main #team #team-wrapper #member-list .member:hover section, body main #team #team-wrapper #member-list .member:active section {
-          bottom: 0; }
-  body footer #contact {
-    padding-top: 56px;
-    padding-left: 24px;
-    padding-right: 24px;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: #eee;
-    background-color: #414141; }
-    body footer #contact #contact-wrapper {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      align-items: center; }
-      body footer #contact #contact-wrapper h2 {
-        margin-bottom: 24px;
-        text-transform: uppercase; }
-      body footer #contact #contact-wrapper i {
-        padding-right: 8px; }
-      body footer #contact #contact-wrapper section {
-        margin-top: 8px;
-        margin-bottom: 8px; }
-      body footer #contact #contact-wrapper #contact-info {
-        flex-basis: 300px; }
-      body footer #contact #contact-wrapper #the-map {
-        flex-basis: 600px; }
-        body footer #contact #contact-wrapper #the-map iframe {
-          width: 100%;
-          height: 450px;
-          box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.5); }
-      body footer #contact #contact-wrapper h3 {
-        padding-top: 16px; }
+    letter-spacing: 10px;
+    text-transform: lowercase; }
+  body header a {
+    display: inline-block;
+    width: 100px;
+    height: 76px;
+    position: relative;
+    cursor: pointer;
+    animation: oscillation 1s infinite linear; }
+    body header a #l, body header a #r {
+      position: absolute;
+      display: inline-block;
+      width: 72px;
+      height: 3px;
+      background-color: rgba(255, 255, 255, 0.6);
+      top: 0;
+      transition: 0.2s all linear; }
+    body header a #l {
+      left: 0;
+      transform-origin: left;
+      transform: rotate(45deg); }
+    body header a #r {
+      right: 0;
+      transform-origin: right;
+      transform: rotate(-45deg); }
+    body header a:hover {
+      animation: none; }
+      body header a:hover #l {
+        transform: translateX(-5px) rotate(45deg) scale(1.1); }
+      body header a:hover #r {
+        transform: translateX(5px) rotate(-45deg) scale(1.1); }
+      body header a:hover #l, body header a:hover #r {
+        background-color: #fff; }
+body main {
+  min-height: 100vh;
+  padding: 100px; }
+  body main #service-list {
+    display: flex; }
+    body main #service-list .service {
+      width: 200px;
+      padding: 24px;
+      text-align: center;
+      background-color: #fff;
+      margin: 16px;
+      transition: 0.2s all ease-in-out;
+      box-shadow: 0px 5px 15px -5px black;
+      cursor: pointer; }
+      body main #service-list .service:hover {
+        box-shadow: 0px 15px 40px -15px black; }
+      body main #service-list .service .fa {
+        margin-bottom: 48px; }
+      body main #service-list .service h3 {
+        margin: 0; }
 
-@media screen and (min-width: 1366px) {
-  #member-list .member {
-    flex-basis: 280px !important;
-    height: 480px !important;
-    object-fit: cover !important; }
-    #member-list .member img {
-      margin-left: -25%;
-      width: inherit !important;
-      height: 100%;
-      transform-origin: center;
-      transform: scale(1.1); }
-    #member-list .member:hover img, #member-list .member:active img {
-      transform: scale(1); } }
+@keyframes oscillation {
+  0% {
+    transform: translateY(0px); }
+  25% {
+    transform: translateY(-10px); }
+  75% {
+    transform: translateY(10px); }
+  100% {
+    transform: translateY(0px); } }
 
 /*# sourceMappingURL=home.css.map */
