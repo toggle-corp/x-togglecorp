@@ -17,8 +17,8 @@ body{
 
         h1{
             font-size: 6em;
-            text-transform: uppercase;
             font-weight: 100;
+            text-transform: uppercase;
             margin-bottom: 16px;
 
             strong{
@@ -32,6 +32,34 @@ body{
             margin: 0;
             letter-spacing: 10px;
             text-transform: lowercase;
+        }
+        @media screen and (max-width: 720px) {
+            h1{
+                font-size: 4em;
+                font-weight: 100;
+
+                strong{
+                    font-weight: 300;
+                }
+            }
+            p{
+                font-size: 1.5em;
+                letter-spacing: 5px;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            h1{
+                font-size: 3em;
+                font-weight: 100;
+
+                strong{
+                    font-weight: 300;
+                }
+            }
+            p{
+                font-size: 1em;
+                letter-spacing: 5px;
+            }
         }
         a{
             display: inline-block;
@@ -77,13 +105,22 @@ body{
     }
     main{
         min-height: 100vh;
-        padding: 100px;
+
+        h2{
+            text-align: center;
+            padding-top: 4vh;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
 
         #service-list{
             display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 48px;
 
             .service{
-                width: 200px;
+                width: 144px;
                 padding: 24px;
                 text-align: center;
                 background-color: #fff;
