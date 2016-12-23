@@ -14,6 +14,10 @@ a {
 a:hover, a:focus, a:active {
   text-decoration: none; }
 
+body h1, body h2, body h3, body h4, body h5 {
+  font-weight: 400; }
+body h1, body h2 {
+  text-transform: uppercase; }
 body header {
   min-height: 100vh;
   display: flex;
@@ -109,212 +113,186 @@ body main {
   min-height: 100vh; }
   body main h2 {
     text-align: center;
-    padding-top: 4vh;
-    padding-bottom: 0;
-    margin-bottom: 0; }
-  body main #service-list {
+    margin: 0;
+    font-size: 2em; }
+  body main #services h2 {
+    padding-top: 48px; }
+  body main #services #service-list {
+    min-height: calc(100vh - 32px);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 48px; }
-    body main #service-list .service {
-      width: 144px;
+    align-items: center; }
+    body main #services #service-list .service {
+      width: 240px;
       padding: 24px;
       text-align: center;
       background-color: #fff;
-      margin: 16px;
+      margin: 16px 24px;
       transition: 0.2s all ease-in-out;
-      box-shadow: 0px 5px 15px -5px black;
+      box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.5);
       cursor: pointer; }
-      body main #service-list .service:hover {
-        box-shadow: 0px 15px 40px -15px black; }
-      body main #service-list .service .fa {
-        margin-bottom: 48px; }
-      body main #service-list .service h3 {
-        margin: 0; }
-<<<<<<< HEAD
-  body main #works {
-    padding: 100px;
-    min-height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; }
-    body main #works h3 {
-      font-weight: 300;
-      text-align: center;
-      margin-left: -40px; }
-    body main #works .work-list {
-      position: relative;
-      width: 400px;
-      height: 400px;
-      perspective: 100px;
-      overflow: hidden;
-      padding-left: 40px; }
-      body main #works .work-list .work {
-        position: absolute;
-        box-shadow: 0px 15px 45px -15px rgba(0, 0, 0, 0.5);
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        width: 320px;
-        background-color: #fff;
-        cursor: pointer;
-        transition: all 0.2s ease-in-out; }
-        body main #works .work-list .work:nth-child(0) {
-          z-index: 10;
-          transform: translateZ(-0px);
-          top: calc(48px - 0px); }
-        body main #works .work-list .work:nth-child(1) {
-          z-index: 9;
-          transform: translateZ(-2px);
-          top: calc(48px - 10px); }
-        body main #works .work-list .work:nth-child(2) {
-          z-index: 8;
-          transform: translateZ(-4px);
-          top: calc(48px - 20px); }
-        body main #works .work-list .work:nth-child(3) {
-          z-index: 7;
-          transform: translateZ(-6px);
-          top: calc(48px - 30px); }
-        body main #works .work-list .work:nth-child(4) {
-          z-index: 6;
-          transform: translateZ(-8px);
-          top: calc(48px - 40px); }
-        body main #works .work-list .work:nth-child(5) {
-          z-index: 5;
-          transform: translateZ(-10px);
-          top: calc(48px - 50px); }
-        body main #works .work-list .work:nth-child(6) {
-          z-index: 4;
-          transform: translateZ(-12px);
-          top: calc(48px - 60px); }
-        body main #works .work-list .work:nth-child(7) {
-          z-index: 3;
-          transform: translateZ(-14px);
-          top: calc(48px - 70px); }
-        body main #works .work-list .work:nth-child(8) {
-          z-index: 2;
-          transform: translateZ(-16px);
-          top: calc(48px - 80px); }
-        body main #works .work-list .work:nth-child(9) {
-          z-index: 1;
-          transform: translateZ(-18px);
-          top: calc(48px - 90px); }
-        body main #works .work-list .work:nth-child(10) {
-          z-index: 0;
-          transform: translateZ(-20px);
-          top: calc(48px - 100px); }
-        body main #works .work-list .work img {
-          width: 100%;
-          max-height: 200px;
-          overflow: hidden; }
-        body main #works .work-list .work p {
-          margin: 0;
-          padding: 10px; }
-      body main #works .work-list:hover .work:nth-child(0) {
-        top: calc(200px - 0px); }
-      body main #works .work-list:hover .work:nth-child(1) {
-        top: calc(200px - 40px); }
-      body main #works .work-list:hover .work:nth-child(2) {
-        top: calc(200px - 80px); }
-      body main #works .work-list:hover .work:nth-child(3) {
-        top: calc(200px - 120px); }
-      body main #works .work-list:hover .work:nth-child(4) {
-        top: calc(200px - 160px); }
-      body main #works .work-list:hover .work:nth-child(5) {
-        top: calc(200px - 200px); }
-      body main #works .work-list:hover .work:nth-child(6) {
-        top: calc(200px - 240px); }
-      body main #works .work-list:hover .work:nth-child(7) {
-        top: calc(200px - 280px); }
-      body main #works .work-list:hover .work:nth-child(8) {
-        top: calc(200px - 320px); }
-      body main #works .work-list:hover .work:nth-child(9) {
-        top: calc(200px - 360px); }
-      body main #works .work-list:hover .work:nth-child(10) {
-        top: calc(200px - 400px); }
-=======
-body #team {
-  min-height: 100vh;
-  background-color: #eee;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-  body #team #team-wrapper h2 {
-    text-align: center;
-    padding-top: 4vh;
-    padding-bottom: 0;
-    margin-bottom: 0; }
-  body #team #team-wrapper #member-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 48px; }
-    body #team #team-wrapper #member-list .member {
-      position: relative;
-      margin: 16px;
-      flex-basis: 232px;
-      overflow: hidden;
-      box-shadow: 0px 5px 15px -5px black;
-      transition: 0.2s all ease-in-out;
-      line-height: 0; }
-      body #team #team-wrapper #member-list .member img {
-        width: 100%;
-        transition: all 0.2s ease-in-out; }
-      body #team #team-wrapper #member-list .member h3 {
-        position: absolute;
-        padding: 12px;
-        margin: 24px;
-        left: 0;
-        bottom: 0;
-        width: 100%;
+      body main #services #service-list .service img {
+        width: 100%; }
+      body main #services #service-list .service h3 {
         margin: 0;
-        text-align: left;
-        background-color: rgba(0, 0, 0, 0.5);
-        font-size: 1.3em;
-        color: #fff;
-        transition: all 0.2s ease-in;
-        line-height: normal; }
-      body #team #team-wrapper #member-list .member section {
-        position: absolute;
-        background-color: rgba(0, 0, 0, 0.5);
-        width: 100%;
-        bottom: -56px;
+        font-weight: 300;
+        height: 56px; }
+      body main #services #service-list .service:hover {
+        box-shadow: 0px 15px 40px -15px rgba(0, 0, 0, 0.5); }
+      @media screen and (max-width: 480px) {
+        body main #services #service-list .service {
+          margin: 4px 0;
+          box-shadow: none;
+          width: 100%;
+          background-color: transparent; }
+          body main #services #service-list .service img {
+            width: 48px;
+            float: left;
+            margin-right: 24px; }
+          body main #services #service-list .service h3 {
+            height: auto;
+            font-weight: 400;
+            font-size: 1em;
+            text-align: left;
+            padding-top: 10px; }
+          body main #services #service-list .service:hover {
+            box-shadow: none; }
+          body main #services #service-list .service:not(:last-child) {
+            border-bottom: 2px solid rgba(0, 0, 0, 0.05); } }
+  body main #team {
+    background-color: #fff; }
+    body main #team h2 {
+      padding-top: 48px; }
+    body main #team #member-list {
+      min-height: calc(100vh - 32px);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center; }
+      body main #team #member-list .member {
+        position: relative;
+        transition: 0.2s all ease-in-out;
+        line-height: 0; }
+        @media screen and (min-width: 480px) {
+          body main #team #member-list .member {
+            margin: 16px;
+            flex-basis: 300px;
+            overflow: hidden;
+            box-shadow: 0px 5px 15px -5px black; }
+            body main #team #member-list .member img {
+              width: 100%; }
+            body main #team #member-list .member h3 {
+              position: absolute;
+              padding: 12px;
+              margin: 24px;
+              left: 0;
+              bottom: 0;
+              width: 100%;
+              margin: 0;
+              text-align: left;
+              background-color: rgba(0, 0, 0, 0.5);
+              font-size: 1.3em;
+              color: #fff;
+              transition: all 0.2s ease-in;
+              line-height: normal; }
+            body main #team #member-list .member section {
+              position: absolute;
+              background-color: rgba(0, 0, 0, 0.5);
+              width: 100%;
+              bottom: -56px;
+              overflow: hidden;
+              text-align: left;
+              height: 56px;
+              line-height: normal;
+              transition: all 0.2s ease-in;
+              color: #fff; }
+              body main #team #member-list .member section p {
+                margin: 0;
+                margin-bottom: 8px;
+                padding-left: 12px;
+                text-align: left; }
+              body main #team #member-list .member section .fa {
+                padding-left: 12px;
+                color: #fff; }
+            body main #team #member-list .member:hover h3 {
+              bottom: 56px; }
+            body main #team #member-list .member:hover section {
+              bottom: 0; } }
+        @media screen and (max-width: 480px) {
+          body main #team #member-list .member {
+            padding: 0 24px;
+            width: 100%;
+            margin: 0; }
+            body main #team #member-list .member:not(:last-child) section {
+              display: inline-block;
+              border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+              width: calc(100% - 124px);
+              padding-bottom: 16px; }
+            body main #team #member-list .member img {
+              float: left;
+              width: 100px;
+              margin-right: 24px;
+              border-radius: 50%; }
+            body main #team #member-list .member h3 {
+              display: inline-block;
+              margin-top: 16px;
+              font-weight: 400; }
+            body main #team #member-list .member p {
+              margin-bottom: 10px;
+              color: #969696;
+              font-size: 0.8em; }
+            body main #team #member-list .member .fa {
+              color: #414141;
+              margin: 10px; }
+              body main #team #member-list .member .fa:first-child {
+                margin-left: 0; } }
+  body main #works {
+    min-height: 100vh;
+    padding-left: 48px;
+    background-color: #414141;
+    color: #fff; }
+    body main #works h2 {
+      padding-top: 48px; }
+    body main #works #product-list {
+      position: relative; }
+      body main #works #product-list .product {
+        background-color: #616161;
+        width: 320px;
+        height: 480px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        box-shadow: 0px 5px 15px -5px black;
+        text-align: center;
         overflow: hidden;
-        text-align: left;
-        height: 56px;
-        line-height: normal;
-        transition: all 0.2s ease-in; }
-        body #team #team-wrapper #member-list .member section p {
-          margin: 0;
-          margin-bottom: 8px;
-          color: rgba(255, 255, 255, 0.9);
-          padding-left: 12px;
-          text-align: left; }
-        body #team #team-wrapper #member-list .member section .fa {
-          color: rgba(255, 255, 255, 0.9);
-          padding-left: 12px; }
-      body #team #team-wrapper #member-list .member:hover, body #team #team-wrapper #member-list .member:active {
-        box-shadow: 0px 15px 40px -15px black; }
-        body #team #team-wrapper #member-list .member:hover h3, body #team #team-wrapper #member-list .member:active h3 {
-          bottom: 56px; }
-        body #team #team-wrapper #member-list .member:hover section, body #team #team-wrapper #member-list .member:active section {
-          bottom: 0; }
-  @media screen and (min-width: 1366px) {
-    body #team #team-wrapper #member-list .member {
-      flex-basis: 300px !important;
-      height: 480px !important;
-      object-fit: cover !important; }
-      body #team #team-wrapper #member-list .member img {
-        margin-left: -25%;
-        width: inherit !important;
-        height: 100%;
-        transform-origin: center;
-        transform: scale(1.1); }
-      body #team #team-wrapper #member-list .member:hover img, body #team #team-wrapper #member-list .member:active img {
-        transform: scale(1); } }
->>>>>>> e33f55c8561ed7d78a28b208d1a8d33fe52075d8
+        position: absolute; }
+        body main #works #product-list .product .img-wrapper {
+          width: 100%;
+          height: 320px;
+          overflow: hidden; }
+          body main #works #product-list .product .img-wrapper img {
+            width: 100%;
+            animation: transzoom 10s infinite linear; }
+        body main #works #product-list .product section {
+          height: 160px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; }
+          body main #works #product-list .product section h3 {
+            margin: 0;
+            font-weight: 400;
+            text-transform: uppercase; }
+          body main #works #product-list .product section p {
+            margin: 0;
+            color: #ccc; }
 
+@keyframes transzoom {
+  0% {
+    transform: scale(1) translateY(0); }
+  50% {
+    transform: scale(1.5) translateX(30px) translateY(30px); }
+  100% {
+    transform: scale(1.6) translateX(90px) translateY(60px); } }
 @keyframes oscillation {
   0% {
     transform: translateY(0px); }

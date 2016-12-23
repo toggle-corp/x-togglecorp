@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name="index.html"), name="index"),
     url(r'^home/$', TemplateView.as_view(template_name="index.html")),
     url(r'^products/mobile/$', TemplateView.as_view(template_name="mobile-apps.html"), name="mobile_apps"),
+    url(r'^works/$', TemplateView.as_view(template_name="works.html"), name="works"),
 
     url(r'^admin/', admin.site.urls),
 ]
