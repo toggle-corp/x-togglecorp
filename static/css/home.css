@@ -27,11 +27,26 @@ body header {
   background-blend-mode: multiply;
   color: #fff;
   text-align: center; }
+  body header #menu {
+    margin: 0; }
+    body header #menu a {
+      display: inline-block;
+      color: #fff;
+      width: 100px;
+      cursor: pointer;
+      opacity: 0.5;
+      letter-spacing: 0.1em;
+      margin-top: 4px;
+      font-weight: 300;
+      transition: 0.2s all ease-in-out; }
+      body header #menu a:hover {
+        opacity: 1; }
   body header h1 {
     font-size: 6em;
     font-weight: 100;
     text-transform: uppercase;
-    margin-bottom: 16px; }
+    margin-bottom: 16px;
+    margin-top: 0; }
     body header h1 strong {
       font-weight: 300;
       color: rgba(231, 76, 60, 0.8); }
@@ -59,14 +74,14 @@ body header {
     body header p {
       font-size: 1em;
       letter-spacing: 5px; } }
-  body header a {
+  body header #arrow a {
     display: inline-block;
     width: 100px;
     height: 76px;
     position: relative;
     cursor: pointer;
     animation: oscillation 1s infinite linear; }
-    body header a #l, body header a #r {
+    body header #arrow a #l, body header #arrow a #r {
       position: absolute;
       display: inline-block;
       width: 72px;
@@ -74,21 +89,21 @@ body header {
       background-color: rgba(255, 255, 255, 0.6);
       top: 0;
       transition: 0.2s all linear; }
-    body header a #l {
+    body header #arrow a #l {
       left: 0;
       transform-origin: left;
       transform: rotate(45deg); }
-    body header a #r {
+    body header #arrow a #r {
       right: 0;
       transform-origin: right;
       transform: rotate(-45deg); }
-    body header a:hover {
+    body header #arrow a:hover {
       animation: none; }
-      body header a:hover #l {
+      body header #arrow a:hover #l {
         transform: translateX(-5px) rotate(45deg) scale(1.1); }
-      body header a:hover #r {
+      body header #arrow a:hover #r {
         transform: translateX(5px) rotate(-45deg) scale(1.1); }
-      body header a:hover #l, body header a:hover #r {
+      body header #arrow a:hover #l, body header #arrow a:hover #r {
         background-color: #fff; }
 body main {
   min-height: 100vh; }
@@ -117,6 +132,7 @@ body main {
         margin-bottom: 48px; }
       body main #service-list .service h3 {
         margin: 0; }
+<<<<<<< HEAD
   body main #works {
     padding: 100px;
     min-height: 100vh;
@@ -215,6 +231,89 @@ body main {
         top: calc(200px - 360px); }
       body main #works .work-list:hover .work:nth-child(10) {
         top: calc(200px - 400px); }
+=======
+body #team {
+  min-height: 100vh;
+  background-color: #eee;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  body #team #team-wrapper h2 {
+    text-align: center;
+    padding-top: 4vh;
+    padding-bottom: 0;
+    margin-bottom: 0; }
+  body #team #team-wrapper #member-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 48px; }
+    body #team #team-wrapper #member-list .member {
+      position: relative;
+      margin: 16px;
+      flex-basis: 232px;
+      overflow: hidden;
+      box-shadow: 0px 5px 15px -5px black;
+      transition: 0.2s all ease-in-out;
+      line-height: 0; }
+      body #team #team-wrapper #member-list .member img {
+        width: 100%;
+        transition: all 0.2s ease-in-out; }
+      body #team #team-wrapper #member-list .member h3 {
+        position: absolute;
+        padding: 12px;
+        margin: 24px;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        margin: 0;
+        text-align: left;
+        background-color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3em;
+        color: #fff;
+        transition: all 0.2s ease-in;
+        line-height: normal; }
+      body #team #team-wrapper #member-list .member section {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        bottom: -56px;
+        overflow: hidden;
+        text-align: left;
+        height: 56px;
+        line-height: normal;
+        transition: all 0.2s ease-in; }
+        body #team #team-wrapper #member-list .member section p {
+          margin: 0;
+          margin-bottom: 8px;
+          color: rgba(255, 255, 255, 0.9);
+          padding-left: 12px;
+          text-align: left; }
+        body #team #team-wrapper #member-list .member section .fa {
+          color: rgba(255, 255, 255, 0.9);
+          padding-left: 12px; }
+      body #team #team-wrapper #member-list .member:hover, body #team #team-wrapper #member-list .member:active {
+        box-shadow: 0px 15px 40px -15px black; }
+        body #team #team-wrapper #member-list .member:hover h3, body #team #team-wrapper #member-list .member:active h3 {
+          bottom: 56px; }
+        body #team #team-wrapper #member-list .member:hover section, body #team #team-wrapper #member-list .member:active section {
+          bottom: 0; }
+  @media screen and (min-width: 1366px) {
+    body #team #team-wrapper #member-list .member {
+      flex-basis: 300px !important;
+      height: 480px !important;
+      object-fit: cover !important; }
+      body #team #team-wrapper #member-list .member img {
+        margin-left: -25%;
+        width: inherit !important;
+        height: 100%;
+        transform-origin: center;
+        transform: scale(1.1); }
+      body #team #team-wrapper #member-list .member:hover img, body #team #team-wrapper #member-list .member:active img {
+        transform: scale(1); } }
+>>>>>>> e33f55c8561ed7d78a28b208d1a8d33fe52075d8
 
 @keyframes oscillation {
   0% {

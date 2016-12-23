@@ -1,21 +1,58 @@
-/*
-Errno::ENOENT: No such file or directory @ rb_sysopen - scss/404.scss
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(22, 23, 25, 0.9);
+  font-family: Dosis;
+  user-select: none; }
+  body #container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%; }
+    body #container p {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 13em;
+      margin: 0; }
+      body #container p a {
+        position: relative; }
+        body #container p a span {
+          position: absolute;
+          padding: 0;
+          margin: 0;
+          left: 35%;
+          bottom: 10%;
+          color: #e95c24;
+          animation: toggle 2s infinite; }
+@keyframes toggle {
+  0% {
+    bottom: 10%; }
+  50% {
+    bottom: 43%; }
+  100% {
+    bottom: 10%; } }
+    body #container h1 {
+      padding-top: 0;
+      margin-top: 0;
+      color: rgba(255, 255, 255, 0.7);
+      display: block;
+      font-size: 3em; }
+    body #container h3 {
+      color: white;
+      padding: 0;
+      margin: 0; }
+    body #container h2 {
+      color: white;
+      display: block;
+      text-transform: uppercase; }
+      body #container h2 a {
+        color: inherit;
+        text-decoration: none; }
+        body #container h2 a span {
+          color: #e95c24; }
 
-Backtrace:
-/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:482:in `read'
-/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:482:in `update_stylesheet'
-/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:209:in `each'
-/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:293:in `watch'
-/usr/lib/ruby/vendor_ruby/sass/plugin.rb:109:in `method_missing'
-/usr/lib/ruby/vendor_ruby/sass/exec/sass_scss.rb:379:in `watch_or_update'
-/usr/lib/ruby/vendor_ruby/sass/exec/sass_scss.rb:51:in `process_result'
-/usr/lib/ruby/vendor_ruby/sass/exec/base.rb:52:in `parse'
-/usr/lib/ruby/vendor_ruby/sass/exec/base.rb:19:in `parse!'
-/usr/bin/sass:8:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Errno::ENOENT: No such file or directory @ rb_sysopen - scss/404.scss"; }
+/*# sourceMappingURL=404.css.map */
