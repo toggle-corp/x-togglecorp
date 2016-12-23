@@ -336,59 +336,116 @@ body{
         }
         #works{
             min-height: 100vh;
-            padding-left: 48px;
             background-color: #414141;
             color: #fff;
+            text-align: center;
 
             h2{
                 padding-top: 48px;
             }
 
-            #product-list{
-                position: relative;
+            #product-list-wrapper {
+                min-height: calc(100vh - 64px);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
 
-                .product{
-                    background-color: #616161;
-                    width: 320px;
-                    height: 480px;
-                    border: 1px solid rgba(255, 255, 255, 0.05);
-                    box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 1);
-                    text-align: center;
-                    overflow: hidden;
-                    position: absolute;
+                #product-list{
+                    position: relative;
+                    width: calc(320px*3);
+                    display: inline-block;
 
-                    .img-wrapper{
-                        width: 100%;
-                        height: 320px;
+                    .product{
+                        background-color: #616161;
+                        width: 320px;
+                        height: 480px;
+                        border: 1px solid rgba(255, 255, 255, 0.05);
+                        box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 1);
+                        text-align: center;
                         overflow: hidden;
+                        position: absolute;
+                        top: 32px;
+                        transition: all 0.6s ease-in-out;
 
-                        img{
+                        &.product-0 {
+                            opacity: 0;
+                            z-index: 0;
+                            filter: blur(7px);
+                        }
+                        &.product-1 {
+                            opacity: 0;
+                            transform: translateX(-100%) scale(0.8);
+                            z-index: 1;
+                            filter: blur(7px);
+                        }
+                        &.product-2 {
+                            opacity: 0.4;
+                            transform: translateX(-50%) scale(0.9);
+                            z-index: 2;
+                            filter: blur(7px);
+                        }
+                        &.product-3 {
+                            opacity: 0.8;
+                            transform: translateX(10%) scale(1.0);
+                            z-index: 3;
+                            filter: blur(3px);
+                        }
+                        &.product-4 {
+                            opacity: 1;
+                            transform: translateX(100%) scale(1.1);
+                            z-index: 4;
+                        }
+                        &.product-5 {
+                            opacity: 0.8;
+                            transform: translateX(190%) scale(1.0);
+                            z-index: 3;
+                            filter: blur(3px);
+                        }
+                        &.product-6 {
+                            opacity: 0.4;
+                            transform: translateX(250%) scale(0.9);
+                            z-index: 2;
+                            filter: blur(7px);
+                        }
+                        &.product-7 {
+                            opacity: 0;
+                            transform: translateX(300%) scale(0.8);
+                            z-index: 1;
+                            filter: blur(7px);
+                        }
+
+                        .img-wrapper{
                             width: 100%;
-                            //transform: scale(2);
-                            animation: transzoom 10s infinite linear;
+                            height: 320px;
+                            overflow: hidden;
+
+                            img{
+                                width: 100%;
+                                //transform: scale(2);
+                                // animation: transzoom 10s infinite linear;
+                            }
+                        }
+                        section{
+                            height: 160px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+
+                            h3{
+                                margin: 0;
+                                font-weight: 400;
+                                text-transform: uppercase;
+                            }
+                            p{
+                                margin: 0;
+                                color: #ccc;
+                            }
                         }
                     }
-                    section{
-                        height: 160px;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-
-                        h3{
-                            margin: 0;
-                            font-weight: 400;
-                            text-transform: uppercase;
-                        }
-                        p{
-                            margin: 0;
-                            color: #ccc;
-                        }
-                    }
-
                 }
             }
-
         }
     }
 

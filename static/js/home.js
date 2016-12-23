@@ -29,4 +29,65 @@ $(document).ready(function(){
     //         $(this).css('top', i*50+'px');
     //     });
     // });
+
+    buildProductsCarousel();
 });
+
+var productsCarousel = {};
+function buildProductsCarousel() {
+    productsCarousel.products = $('.product');
+    productsCarousel.firstVisible = 0;
+
+    productsCarousel.refresh = function() {
+        var products = productsCarousel.products;
+        var firstVisible = productsCarousel.firstVisible;
+
+        var i = firstVisible;
+        var n = 0;
+        for (; i<products.length; i++) {
+            if (n < 7) {
+                products.eq(i).attr('class', 'product product-'+(n+1));
+            } else {
+                products.eq(i).attr('class', 'product product-0');
+            }
+
+            n++;
+        }
+        i = 0;
+        for (; i<firstVisible; i++) {
+            if (n < 7) {
+                products.eq(i).attr('class', 'product product-'+(n+1));
+            } else {
+                products.eq(i).attr('class', 'product product-0');
+            }
+
+            n++;
+        }
+    }
+
+    productsCarousel.next = function() {
+        productsCarousel.firstVisible++;
+        if (productsCarousel.firstVisible >= productsCarousel.products.length) {
+            productsCarousel.firstVisible = 0;
+        }
+        productsCarousel.refresh();
+    }
+
+    productsCarousel.previous = function() {
+        productsCarousel.firstVisible--;
+        if (productsCarousel.firstVisible < 0) {
+            productsCarousel.firstVisible = productsCarousel.products.length-1;
+        }
+        productsCarousel.refresh();
+    }
+
+    productsCarousel.products.on('click', function() {
+        productsCarousel.firstVisible = $(this).index() - 3;
+        if (productsCarousel.firstVisible < 0) {
+            productsCarousel.firstVisible = productsCarousel.products.length + productsCarousel.firstVisible;
+        }
+        productsCarousel.refresh();
+    });
+
+    setInterval(productsCarousel.next, 2500);
+}
