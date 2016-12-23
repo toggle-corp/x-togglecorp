@@ -13,4 +13,20 @@ $(document).ready(function(){
                }
            });
     });
+
+    $('.work-list').on('click', '.work', function(){
+        var container = $(this).parent();
+        var works = container.find('.work');
+        var that = $(this);
+        var temp = that.clone(true);
+        (works.eq(0)).replaceWith(temp);
+        that.replaceWith(works.eq(0));
+    });
+    // $('.work-list').on('mouseover', '.work', function(){
+    //     var container = $(this).parent();
+    //     var works = container.find('.work');
+    //     works.each(function(i){
+    //         $(this).css('top', i*50+'px');
+    //     });
+    // });
 });

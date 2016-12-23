@@ -140,6 +140,72 @@ body{
                 }
             }
         }
+
+        #works{
+            padding: 100px;
+            min-height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            h3{
+                font-weight: 300;
+                text-align: center;
+                margin-left: -40px;
+            }
+            .work-list{
+                position: relative;
+                width: 400px;
+                height: 400px;
+                perspective: 100px;
+                overflow: hidden;
+                padding-left: 40px;
+
+                .work{
+                    position: absolute;
+                    box-shadow: 0px 15px 45px -15px rgba(0, 0, 0, 0.5);
+                    border: 1px solid rgba(0, 0, 0, 0.1);
+                    //padding: 10px;
+                    width: 320px;
+                    background-color: #fff;
+                    cursor: pointer;
+                    transition: all 0.2s ease-in-out;
+                    @for $i from 0 through 10 {
+                        &:nth-child(#{$i}) {
+                            z-index: 10-$i;
+                            transform: translateZ(-#{$i * 2}px);
+                            top: calc(48px - #{$i * 10}px);
+
+                            // &:hover{
+                            //     top: -#{$i * 24}px;
+                            // }
+                        }
+                    }
+                    img{
+                        width: 100%;
+                        max-height: 200px;
+                        overflow: hidden;
+                        //margin: -10px;
+                    }
+                    p{
+                        //margin-top: -4px;
+                        margin: 0;
+                        padding: 10px;
+                    }
+
+                }
+
+                &:hover{
+                    .work{
+                        @for $i from 0 through 10 {
+                            &:nth-child(#{$i}) {
+                                top: calc(200px - #{$i * 40}px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -156,5 +222,16 @@ body{
     }
     100%{
         transform: translateY(0px);
+    }
+}
+
+@keyframes swipe{
+    50%{
+        transform: translateX(100px);
+    }
+    100%{
+        z-index: 100;
+        transform: translateZ(-30px);
+        top: 100px;
     }
 }
