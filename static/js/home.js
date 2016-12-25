@@ -1,4 +1,19 @@
 $(document).ready(function(){
+    fixCarousel();
+    $( window ).resize(function(){
+        fixCarousel();
+    });
+
+    function fixCarousel(){
+        if($('body').width() < 888){
+            $('#product-list-wrapper').css('margin-left', (($('body').width()-888)/2)+'px');
+            $('#previous').css('left', ((888 - $('body').width())/2)+'px')
+            $('#next').css('right', ((888 - $('body').width())/2)+'px')
+        } else{
+            $('#product-list-wrapper').css('margin-left', 'auto');
+        }
+    }
+
     $(function() {
            $('a[href*="#"]:not([href="#"])').click(function() {
                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -13,27 +28,12 @@ $(document).ready(function(){
                }
            });
     });
-
-    // $('.work-list').on('click', '.work', function(){
-    //     var container = $(this).parent();
-    //     var works = container.find('.work');
-    //     var that = $(this);
-    //     var temp = that.clone(true);
-    //     (works.eq(0)).replaceWith(temp);
-    //     that.replaceWith(works.eq(0));
-    // });
-    // $('.work-list').on('mouseover', '.work', function(){
-    //     var container = $(this).parent();
-    //     var works = container.find('.work');
-    //     works.each(function(i){
-    //         $(this).css('top', i*50+'px');
-    //     });
-    // });
-
     buildProductsCarousel();
 });
 
 var productsCarousel = {};
+var delayed = false;
+
 function buildProductsCarousel() {
     productsCarousel.products = $('.product');
     productsCarousel.firstVisible = 0;
@@ -87,7 +87,14 @@ function buildProductsCarousel() {
             productsCarousel.firstVisible = productsCarousel.products.length + productsCarousel.firstVisible;
         }
         productsCarousel.refresh();
+        delayed = true;
     });
 
-    setInterval(productsCarousel.next, 2500);
+    setInterval(function(){
+        if(delayed){
+            delayed = false;
+        } else{
+            productsCarousel.next()
+        }
+    }, 2500);
 }
