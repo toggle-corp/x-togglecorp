@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Toggle Corp.</title>
-    
+
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400" rel="stylesheet">
     <link href="{% static 'css/home.css' %}" rel='stylesheet' type='text/css'>
@@ -17,12 +17,11 @@
     <script src="{% static 'js/home.js' %}"></script>
 
 </head>
-
 <body>
 <header>
     <div id="menu">
-        <a href="#main"><span>S</span>ervices</a>
-        <a>Works</a>
+        <a href="#main">Services</a>
+        <a href="#works">Works</a>
         <a href="#team">Team</a>
         <a>Contact</a>
     </div>
@@ -58,11 +57,11 @@
                 <h3>Search Engine Optimization</h3>
             </div>
             <div class="service">
-                <img src="{% static 'img/services/design-animated.gif' %}">
+                <img src="{% static 'img/services/design.png' %}">
                 <h3>Graphics Design</h3>
             </div>
             <div class="service">
-                <img src="{% static 'img/services/animation.gif' %}">
+                <img src="{% static 'img/services/animation.png' %}">
                 <h3>Animation</h3>
             </div>
             <div class="service">
@@ -75,59 +74,8 @@
             </div>
         </div>
     </section>
-    <section id="team">
-        <h2>Our team</h2>
-        <div id="member-list">
-            <div class="member">
-                <img src="{% static 'img/fh.jpg' %}">
-                <h3>Ankit Mehata</h3>
-                <section>
-                    <p>CEO / Co-founder</p>
-                    <a target="_blank" href="https://github.com/FrozenHelium"><i class="fa fa-github"></i></a><a target="_blank" href="https://www.linkedin.com/in/frozenhelium"><i class="fa fa-linkedin"></i></a>
-                </section>
-            </div>
-            <div class="member">
-                <img src="{% static 'img/adi.jpg' %}">
-                <h3>Aditya Khatri</h3>
-                <section>
-                    <p>Co-founder / Designer</p>
-                    <a target="_blank" href="https://github.com/AdityaKhatri"><i class="fa fa-github"></i></a><a target="_blank" href="https://www.linkedin.com/in/adityakhatri47"><i class="fa fa-linkedin"></i></a>
-                </section>
-            </div>
-
-            <div class="member">
-                <img src="{% static 'img/bibek.jpg' %}">
-                <h3>Bibek Dahal</h3>
-                <section>
-                    <p>Co-founder / Developer</p>
-                    <a target="_blank" href="https://github.com/bibekdahal"><i class="fa fa-github"></i></a>
-                    <a target="_blank" href="https://www.linkedin.com/in/bibek-dahal"><i class="fa fa-linkedin"></i></a>
-                    <a target="_blank" href="http://bibek.togglecorp.com"><i class="fa fa-globe"></i></a>
-                </section>
-            </div>
-            <div class="member">
-                <img src="{% static 'img/pprabesh.jpg' %}">
-                <h3>Prabesh Pathak</h3>
-                <section>
-                    <p>Co-founder / Designer</p>
-                    <a target="_blank" href="https://github.com/pprabesh"><i class="fa fa-github"></i></a><a target="_blank" href="https://www.linkedin.com/in/prabesh-pathak-423202a9"><i class="fa fa-linkedin"></i></a>
-                </section>
-            </div>
-            <div class="member">
-                <img src="{% static 'img/ewan.jpg' %}">
-                <h3>Ewan Oglethorpe</h3>
-                <section>
-                    <p>Advisor</p>
-                    <a target="_blank" href="https://github.com/eoglethorpe"><i class="fa fa-github"></i></a>
-                    <a target="_blank" href="https://www.linkedin.com/in/ewan-oglethorpe-b5b12349"><i class="fa fa-linkedin"></i></a>
-                </section>
-            </div>
-        </div>
-    </section>
-
     <section id="works">
         <h2>Our works</h2>
-
         <div id="product-list-wrapper">
             <button onclick="productsCarousel.previous(); delayed=true;" id="previous"><i class="fa fa-chevron-left fa-4x"></i></button>
             <button onclick="productsCarousel.next(); delayed=true;" id="next"><i class="fa fa-chevron-right fa-4x"></i></button>
@@ -215,7 +163,55 @@
                 </div>
             </div>
         </div>
+    </section>
+    <section id="team">
+        <h2>Our team</h2>
+        <div id="member-list">
+            <div class="member">
+                <img src="{% static 'img/fh.jpg' %}">
+                <h3>Ankit Mehata</h3>
+                <section>
+                    <p>CEO / Co-founder</p>
+                    <a target="_blank" href="https://github.com/FrozenHelium"><i class="fa fa-github"></i></a><a target="_blank" href="https://www.linkedin.com/in/frozenhelium"><i class="fa fa-linkedin"></i></a>
+                </section>
+            </div>
+            <div class="member">
+                <img src="{% static 'img/adi.jpg' %}">
+                <h3>Aditya Khatri</h3>
+                <section>
+                    <p>Co-founder / Designer</p>
+                    <a target="_blank" href="https://github.com/AdityaKhatri"><i class="fa fa-github"></i></a><a target="_blank" href="https://www.linkedin.com/in/adityakhatri47"><i class="fa fa-linkedin"></i></a>
+                </section>
+            </div>
 
+            <div class="member">
+                <img src="{% static 'img/bibek.jpg' %}">
+                <h3>Bibek Dahal</h3>
+                <section>
+                    <p>Co-founder / Developer</p>
+                    <a target="_blank" href="https://github.com/bibekdahal"><i class="fa fa-github"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/bibek-dahal"><i class="fa fa-linkedin"></i></a>
+                    <a target="_blank" href="http://bibek.togglecorp.com"><i class="fa fa-globe"></i></a>
+                </section>
+            </div>
+            <div class="member">
+                <img src="{% static 'img/pprabesh.jpg' %}">
+                <h3>Prabesh Pathak</h3>
+                <section>
+                    <p>Co-founder / Designer</p>
+                    <a target="_blank" href="https://github.com/pprabesh"><i class="fa fa-github"></i></a><a target="_blank" href="https://www.linkedin.com/in/prabesh-pathak-423202a9"><i class="fa fa-linkedin"></i></a>
+                </section>
+            </div>
+            <div class="member">
+                <img src="{% static 'img/ewan.jpg' %}">
+                <h3>Ewan Oglethorpe</h3>
+                <section>
+                    <p>Advisor</p>
+                    <a target="_blank" href="https://github.com/eoglethorpe"><i class="fa fa-github"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/ewan-oglethorpe-b5b12349"><i class="fa fa-linkedin"></i></a>
+                </section>
+            </div>
+        </div>
     </section>
 </main>
 <footer>
