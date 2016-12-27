@@ -141,7 +141,7 @@ body {
         overflow: hidden; }
         body main #services #service-list .service img {
           width: auto;
-          height: 160px; }
+          height: 100px; }
         @media screen and (min-width: 1366px) {
           body main #services #service-list .service {
             width: 240px; }
@@ -181,7 +181,7 @@ body {
       body main #team h2 {
         padding-top: 48px; }
       body main #team #member-list {
-        min-height: calc(80vh - 100px);
+        min-height: calc(90vh - 100px);
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -375,7 +375,8 @@ body {
               height: 336px;
               overflow: hidden; }
               body main #works #product-list-wrapper #product-list .product .img-wrapper img {
-                width: 100%; }
+                width: 100%;
+                height: auto; }
             body main #works #product-list-wrapper #product-list .product section {
               height: 120px;
               display: flex;
@@ -390,28 +391,30 @@ body {
               body main #works #product-list-wrapper #product-list .product section p {
                 margin: 0;
                 color: rgba(255, 255, 255, 0.6); }
-  body footer #contact {
-    min-height: 60vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap; }
-    body footer #contact .fa {
-      width: 32px; }
-    body footer #contact #the-map {
-      max-width: 800px;
-      width: 100%;
-      min-width: 200px;
-      max-height: 600px;
-      height: 100%;
-      min-height: 200px; }
-      body footer #contact #the-map iframe {
+  body footer {
+    background-color: #eee; }
+    body footer #contact {
+      min-height: 60vh;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap; }
+      body footer #contact .fa {
+        width: 32px; }
+      body footer #contact #the-map {
+        max-width: 800px;
         width: 100%;
-        height: 400px;
-        box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.5);
-        border: 1px solid rgba(255, 255, 255, 0.1); }
-    body footer #contact a {
-      color: rgba(231, 76, 60, 0.8); }
+        min-width: 200px;
+        max-height: 600px;
+        height: 100%;
+        min-height: 200px; }
+        body footer #contact #the-map iframe {
+          width: 100%;
+          height: 400px;
+          box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.5);
+          border: 1px solid rgba(255, 255, 255, 0.1); }
+      body footer #contact a {
+        color: rgba(231, 76, 60, 0.8); }
 
 @keyframes transzoom {
   0% {

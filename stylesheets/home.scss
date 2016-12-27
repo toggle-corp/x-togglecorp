@@ -146,7 +146,6 @@ body{
         #services{
             h2{
                 padding-top: 48px;
-
             }
             #service-list{
                 min-height: calc(100vh - 100px);
@@ -168,7 +167,7 @@ body{
 
                     img{
                         width: auto;
-                        height: 160px;
+                        height: 100px;
                     }
                     @media screen and (min-width: 1366px) {
                         width: 240px;
@@ -223,7 +222,7 @@ body{
                 padding-top: 48px;
             }
             #member-list{
-                min-height: calc(80vh - 100px);
+                min-height: calc(90vh - 100px);
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
@@ -473,6 +472,8 @@ body{
 
                             img{
                                 width: 100%;
+                                height: auto;
+                                //transform: scale(2);
                             }
                         }
                         section{
@@ -499,6 +500,7 @@ body{
         }
     }
     footer{
+        background-color: #eee;
         #contact{
             min-height: 60vh;
             display: flex;
