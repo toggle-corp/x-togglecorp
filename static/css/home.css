@@ -375,8 +375,10 @@ body {
               height: 336px;
               overflow: hidden; }
               body main #works #product-list-wrapper #product-list .product .img-wrapper img {
+                object-fit: cover;
+                object-position: top left;
                 width: 100%;
-                height: auto; }
+                height: 100%; }
             body main #works #product-list-wrapper #product-list .product section {
               height: 120px;
               display: flex;
@@ -387,14 +389,17 @@ body {
               body main #works #product-list-wrapper #product-list .product section h3 {
                 margin: 0;
                 font-weight: 400;
-                text-transform: uppercase; }
+                text-transform: uppercase;
+                letter-spacing: 4px; }
               body main #works #product-list-wrapper #product-list .product section p {
                 margin: 0;
-                color: rgba(255, 255, 255, 0.6); }
+                color: #aaa;
+                font-size: 13px;
+                padding: 8px 16px; }
   body footer {
     background-color: #eee; }
     body footer #contact {
-      min-height: 60vh;
+      min-height: 700px;
       display: flex;
       justify-content: space-around;
       align-items: center;

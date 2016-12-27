@@ -471,8 +471,11 @@ body{
                             overflow: hidden;
 
                             img{
+                                object-fit: cover;
+                                object-position: top left;
                                 width: 100%;
-                                height: auto;
+                                height: 100%;
+                                //transform: translateY(30%);
                                 //transform: scale(2);
                             }
                         }
@@ -488,10 +491,13 @@ body{
                                 margin: 0;
                                 font-weight: 400;
                                 text-transform: uppercase;
+                                letter-spacing: 4px;
                             }
                             p{
                                 margin: 0;
-                                color: rgba(255, 255, 255, 0.6);
+                                color: #aaa;
+                                font-size: 13px;
+                                padding: 8px 16px;
                             }
                         }
                     }
@@ -502,7 +508,7 @@ body{
     footer{
         background-color: #eee;
         #contact{
-            min-height: 60vh;
+            min-height: 700px;
             display: flex;
             justify-content: space-around;
             align-items: center;
