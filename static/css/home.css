@@ -283,6 +283,8 @@ body {
       background-color: #414141;
       color: #fff;
       overflow-x: hidden; }
+      body main #works a {
+        color: inherit; }
       body main #works h2 {
         text-align: center;
         margin: 0;
