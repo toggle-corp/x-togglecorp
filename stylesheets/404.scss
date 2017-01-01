@@ -67,4 +67,33 @@ body {
             }
         }
     }
+    @media screen and (max-width: 480px) {
+        #container{
+            transform: scale(0.9);
+        }
+    }
+    @media screen and (max-width: 301px) {
+        #container{
+            transform: scale(0.60);
+
+            h1{
+                font-size: 2em;
+            }
+            h3{
+                font-size: 0.8em;
+            }
+        }
+    }
+    @media screen and (max-width: 200px) {
+        #container{
+            transform: scale(0.50);
+
+            h1{
+                font-size: 1.6em;
+            }
+            h3{
+                font-size: 0.6em;
+            }
+        }
+    }
 }

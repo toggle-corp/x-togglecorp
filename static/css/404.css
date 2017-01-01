@@ -54,5 +54,22 @@ body {
         text-decoration: none; }
         body #container h2 a span {
           color: #e95c24; }
+  @media screen and (max-width: 480px) {
+    body #container {
+      transform: scale(0.9); } }
+  @media screen and (max-width: 301px) {
+    body #container {
+      transform: scale(0.6); }
+      body #container h1 {
+        font-size: 2em; }
+      body #container h3 {
+        font-size: 0.8em; } }
+  @media screen and (max-width: 200px) {
+    body #container {
+      transform: scale(0.5); }
+      body #container h1 {
+        font-size: 1.6em; }
+      body #container h3 {
+        font-size: 0.6em; } }
 
 /*# sourceMappingURL=404.css.map */
