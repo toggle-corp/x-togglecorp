@@ -235,9 +235,11 @@ body{
                     height: 50vh;
 
                     img{
-                        width: auto;
+                        width: 100%;
                         height: 100%;
-                        margin-left: -22%;
+                        //margin-left: -22%;
+                        object-fit: cover;
+                        object-position: center;
                     }
 
                     @media screen and (min-width: 480px) {
@@ -299,7 +301,7 @@ body{
                         margin: 10px;
 
                         img{
-                            margin-left: -33%;
+                            //margin-left: -33%;
                         }
                     }
                     @media screen and (max-width: 480px) {
