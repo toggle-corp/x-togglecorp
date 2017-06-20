@@ -1,12 +1,16 @@
-body {
+@charset "UTF-8";
+* {
+  font-family: "Inconsolata", monospace;
+  box-sizing: border-box;
   margin: 0;
-  background-color: #f5f5f5;
+  padding: 0; }
+
+body {
+  background-color: #f3f3f3;
   font-family: 'Lato', sans-serif;
-  color: #414141;
+  color: #616161;
   font-weight: 400;
-  line-height: 1.5;
-  max-width: 100vw;
-  overflow-x: hidden; }
+  line-height: 1.24; }
 
 a {
   text-decoration: none; }
@@ -14,436 +18,129 @@ a {
 a:hover, a:focus, a:active {
   text-decoration: none; }
 
-body {
-  width: 100vw;
-  overflow-x: hidden; }
-  body h1, body h2, body h3, body h4, body h5 {
-    font-weight: 400; }
-  body h1, body h2 {
-    text-transform: uppercase; }
-  body header {
-    min-height: 100vh;
+body > header {
+  position: relative; }
+  body > header h1 {
+    min-height: 100px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
     align-items: center;
-    background-color: #717171;
-    background-image: url("../img/bg.jpg");
-    background-position: center center;
-    background-size: cover;
-    background-blend-mode: multiply;
-    color: #fff;
-    text-align: center; }
-    body header #menu {
-      margin: 0; }
-      body header #menu a {
-        display: inline-block;
-        color: #fff;
-        padding: 10px;
-        cursor: pointer;
-        opacity: 0.5;
-        letter-spacing: 0.1em;
-        margin-top: 4px;
-        font-weight: 400;
-        transition: 0.2s all ease-in-out; }
-        body header #menu a:hover {
-          opacity: 1; }
-    body header h1 {
-      font-size: 6em;
-      font-weight: 100;
-      text-transform: uppercase;
-      margin-bottom: 16px;
-      margin-top: 0; }
-      body header h1 strong {
-        font-weight: 300;
-        color: rgba(231, 76, 60, 0.8); }
-    body header p {
-      font-size: 2em;
-      font-weight: 300;
-      margin: 0;
-      letter-spacing: 10px;
-      text-transform: lowercase; }
-    @media screen and (max-width: 720px) {
-      body header h1 {
-        font-size: 4em;
-        font-weight: 100; }
-        body header h1 strong {
-          font-weight: 300; }
-      body header p {
-        font-size: 1.5em;
-        letter-spacing: 5px; } }
-    @media screen and (max-width: 480px) {
-      body header h1 {
-        font-size: 3em;
-        font-weight: 100; }
-        body header h1 strong {
-          font-weight: 300; }
-      body header p {
-        font-size: 1em;
-        letter-spacing: 5px; } }
-    body header #arrow a {
-      display: inline-block;
-      width: 100px;
-      height: 76px;
-      position: relative;
-      cursor: pointer;
-      animation: oscillation 1s infinite linear; }
-      body header #arrow a #l, body header #arrow a #r {
-        position: absolute;
-        display: inline-block;
-        width: 72px;
-        height: 3px;
-        background-color: rgba(255, 255, 255, 0.6);
-        top: 0;
-        transition: 0.2s all linear; }
-      body header #arrow a #l {
-        left: 0;
-        transform-origin: left;
-        transform: rotate(45deg); }
-      body header #arrow a #r {
-        right: 0;
-        transform-origin: right;
-        transform: rotate(-45deg); }
-      body header #arrow a:hover {
-        animation: none; }
-        body header #arrow a:hover #l {
-          transform: translateX(-5px) rotate(45deg) scale(1.1); }
-        body header #arrow a:hover #r {
-          transform: translateX(5px) rotate(-45deg) scale(1.1); }
-        body header #arrow a:hover #l, body header #arrow a:hover #r {
-          background-color: #fff; }
-  body main {
-    min-height: 100vh; }
-    body main h2 {
-      text-align: center;
-      margin: 0;
-      font-size: 2em; }
-      @media screen and (max-width: 480px) {
-        body main h2 {
-          padding-bottom: 24px; } }
-    body main #services h2 {
-      padding-top: 48px; }
-    body main #services #service-list {
-      min-height: calc(100vh - 100px);
+    font-size: 3em;
+    font-weight: 400;
+    padding: 0 56px;
+    color: #000; }
+    body > header h1 span:first-child {
+      color: #e04c56; }
+  body > header > div {
+    min-height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap; }
+    body > header > div > p {
+      flex-basis: 100%;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center; }
-      body main #services #service-list .service {
-        width: 160px;
-        padding: 24px;
-        text-align: center;
-        background-color: #fff;
-        margin: 10px 24px;
-        transition: 0.2s all ease-in-out;
-        box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.5);
-        cursor: pointer;
-        overflow: hidden; }
-        body main #services #service-list .service img {
-          width: auto;
-          height: 100px; }
-        @media screen and (min-width: 1366px) {
-          body main #services #service-list .service {
-            width: 240px; }
-            body main #services #service-list .service img {
-              width: auto;
-              height: 240px; } }
-        body main #services #service-list .service h3 {
-          margin: 0;
-          font-weight: 400;
-          font-size: 1em;
-          height: 72px; }
-        body main #services #service-list .service:hover {
-          box-shadow: 0px 15px 40px -15px rgba(0, 0, 0, 0.5); }
-        @media screen and (max-width: 480px) {
-          body main #services #service-list .service {
-            margin: 4px 0;
-            box-shadow: none;
-            width: 100%;
-            background-color: transparent; }
-            body main #services #service-list .service img {
-              width: 48px;
-              height: 48px;
-              float: left;
-              margin-right: 24px; }
-            body main #services #service-list .service h3 {
-              height: auto;
-              font-weight: 400;
-              font-size: 1em;
-              text-align: left;
-              padding-top: 10px; }
-            body main #services #service-list .service:hover {
-              box-shadow: none; }
-            body main #services #service-list .service:not(:last-child) {
-              border-bottom: 2px solid rgba(0, 0, 0, 0.05); } }
-    body main #team {
-      background-color: #fff; }
-      body main #team h2 {
-        padding-top: 48px; }
-      body main #team #member-list {
-        min-height: calc(90vh - 100px);
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center; }
-        body main #team #member-list .member {
-          position: relative;
-          transition: 0.2s all ease-in-out;
-          line-height: 0;
-          height: 50vh; }
-          body main #team #member-list .member img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center; }
-          @media screen and (min-width: 480px) {
-            body main #team #member-list .member {
-              margin: 10px;
-              flex-basis: 240px;
-              overflow: hidden;
-              box-shadow: 0px 5px 15px -5px black; }
-              body main #team #member-list .member h3 {
-                position: absolute;
-                padding: 12px;
-                margin: 24px;
-                left: 0;
-                bottom: 0;
-                width: 100%;
-                margin: 0;
-                text-align: left;
-                background-color: rgba(0, 0, 0, 0.5);
-                font-size: 1.3em;
-                color: #fff;
-                transition: all 0.2s ease-in;
-                line-height: normal; }
-              body main #team #member-list .member section {
-                position: absolute;
-                background-color: rgba(0, 0, 0, 0.5);
-                width: 100%;
-                bottom: -56px;
-                overflow: hidden;
-                text-align: left;
-                height: 56px;
-                line-height: normal;
-                transition: all 0.2s ease-in;
-                color: #fff; }
-                body main #team #member-list .member section p {
-                  margin: 0;
-                  margin-bottom: 8px;
-                  padding-left: 12px;
-                  text-align: left; }
-                body main #team #member-list .member section .fa {
-                  padding-left: 12px;
-                  color: #fff; }
-              body main #team #member-list .member:hover h3 {
-                bottom: 56px; }
-              body main #team #member-list .member:hover section {
-                bottom: 0; } }
-          @media screen and (min-width: 1366px) {
-            body main #team #member-list .member {
-              height: 50vh;
-              margin: 10px; } }
-          @media screen and (max-width: 480px) {
-            body main #team #member-list .member {
-              padding: 0 24px;
-              width: 100%;
-              margin: 0;
-              height: auto; }
-              body main #team #member-list .member:not(:last-child) section {
-                display: inline-block;
-                border-bottom: 2px solid rgba(0, 0, 0, 0.05);
-                width: calc(100% - 124px); }
-              body main #team #member-list .member section {
-                padding-bottom: 16px; }
-              body main #team #member-list .member img {
-                float: left;
-                width: 100px;
-                height: 100px;
-                margin-right: 24px;
-                border-radius: 50%;
-                margin-left: auto; }
-              body main #team #member-list .member h3 {
-                display: inline-block;
-                margin-top: 16px;
-                padding-top: 16px;
-                font-weight: 400; }
-              body main #team #member-list .member p {
-                margin-bottom: 10px;
-                color: #969696;
-                font-size: 0.8em; }
-              body main #team #member-list .member .fa {
-                color: #414141;
-                margin: 10px; }
-                body main #team #member-list .member .fa:first-child {
-                  margin-left: 0; } }
-    body main #works {
-      width: 100vw;
-      min-height: 720px;
-      background-color: #414141;
-      color: #fff;
-      overflow-x: hidden; }
-      body main #works a {
-        color: inherit; }
-      body main #works h2 {
-        text-align: center;
-        margin: 0;
-        padding-top: 48px;
-        padding-bottom: 48px;
-        font-weight: 400; }
-        @media screen and (max-width: 480px) {
-          body main #works h2 {
-            padding-bottom: 16px; } }
-      body main #works #product-list-wrapper {
-        height: 456px;
-        width: 888px;
-        margin: auto;
-        position: relative; }
-        @media screen and (max-width: 480px) {
-          body main #works #product-list-wrapper {
-            transform: scale(0.72); } }
-        body main #works #product-list-wrapper #previous {
-          left: 0; }
-        body main #works #product-list-wrapper #next {
-          right: 0; }
-        body main #works #product-list-wrapper button {
-          position: absolute;
-          z-index: 1001;
-          background-color: transparent;
-          color: rgba(255, 255, 255, 0.4);
-          border: none;
-          transition: all 0.2s ease-in-out;
-          cursor: pointer;
-          transform: scale(1.3);
-          top: 228px;
-          outline: none; }
-          body main #works #product-list-wrapper button:hover {
-            color: rgba(255, 255, 255, 0.8);
-            transform: scale(1.5); }
-        body main #works #product-list-wrapper #product-list {
-          position: relative;
-          display: block; }
-          body main #works #product-list-wrapper #product-list .product {
-            background-color: #616161;
-            width: 296px;
-            height: 456px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            box-shadow: 0px 5px 15px -5px black;
-            text-align: center;
-            overflow: hidden;
-            position: absolute;
-            top: 32px;
-            transition: all 0.6s ease-in-out; }
-            body main #works #product-list-wrapper #product-list .product.product-0 {
-              opacity: 0;
-              z-index: 0;
-              filter: blur(7px); }
-            body main #works #product-list-wrapper #product-list .product.product-1 {
-              opacity: 0;
-              transform: translateX(-100%) scale(0.8);
-              z-index: 1;
-              filter: blur(7px); }
-            body main #works #product-list-wrapper #product-list .product.product-2 {
-              opacity: 0.4;
-              transform: translateX(-50%) scale(0.9);
-              z-index: 2;
-              filter: blur(7px); }
-            body main #works #product-list-wrapper #product-list .product.product-3 {
-              opacity: 0.8;
-              transform: translateX(10%) scale(1);
-              z-index: 3;
-              filter: blur(3px); }
-            body main #works #product-list-wrapper #product-list .product.product-4 {
-              opacity: 1;
-              transform: translateX(100%) scale(1.1);
-              z-index: 4; }
-            body main #works #product-list-wrapper #product-list .product.product-5 {
-              opacity: 0.8;
-              transform: translateX(190%) scale(1);
-              z-index: 3;
-              filter: blur(3px); }
-            body main #works #product-list-wrapper #product-list .product.product-6 {
-              opacity: 0.4;
-              transform: translateX(250%) scale(0.9);
-              z-index: 2;
-              filter: blur(7px); }
-            body main #works #product-list-wrapper #product-list .product.product-7 {
-              opacity: 0;
-              transform: translateX(300%) scale(0.8);
-              z-index: 1;
-              filter: blur(7px); }
-            body main #works #product-list-wrapper #product-list .product .img-wrapper {
-              width: 100%;
-              height: 336px;
-              overflow: hidden; }
-              body main #works #product-list-wrapper #product-list .product .img-wrapper img {
-                object-fit: cover;
-                object-position: top left;
-                width: 100%;
-                height: 100%; }
-            body main #works #product-list-wrapper #product-list .product section {
-              height: 120px;
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-              border-top: 1px solid rgba(255, 255, 255, 0.1); }
-              body main #works #product-list-wrapper #product-list .product section h3 {
-                margin: 0;
-                font-weight: 400;
-                text-transform: uppercase;
-                letter-spacing: 4px; }
-              body main #works #product-list-wrapper #product-list .product section p {
-                margin: 0;
-                color: #aaa;
-                font-size: 13px;
-                padding: 8px 16px; }
-  body footer {
-    background-color: #eee; }
-    body footer #contact {
-      min-height: 700px;
-      display: flex;
-      justify-content: space-around;
       align-items: center;
-      flex-wrap: wrap; }
-      body footer #contact .fa {
-        width: 32px; }
-      body footer #contact #the-map {
-        max-width: 800px;
-        width: 100%;
-        min-width: 200px;
-        max-height: 600px;
-        height: 100%;
-        min-height: 200px; }
-        body footer #contact #the-map iframe {
-          width: 100%;
-          height: 400px;
-          box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.5);
-          border: 1px solid rgba(255, 255, 255, 0.1); }
-      body footer #contact a {
-        color: rgba(231, 76, 60, 0.8); }
-
-@keyframes transzoom {
-  0% {
-    transform: scale(1) translateY(0); }
+      font-size: 3.2em;
+      color: rgba(0, 0, 0, 0.8);
+      padding: 0 56px;
+      font-weight: 700;
+      margin-bottom: 48px; }
+    body > header > div .carousel {
+      padding: 0 56px;
+      flex-basis: 100%;
+      display: flex;
+      align-items: center; }
+      body > header > div .carousel p {
+        font-size: 1.44em; }
+        body > header > div .carousel p:not(:first-child) {
+          display: none; }
+    body > header > div .carousel .terminal::before {
+      content: '@togglecorp:~$ ';
+      color: #e04c56; }
+    body > header > div .carousel .terminal::after {
+      content: '█'; }
+    body > header > div .carousel .terminal.blinking::after {
+      animation: 1s blink step-end infinite; }
+    body > header > div .carousel .content {
+      display: none; }
+@keyframes blink {
+  from, to {
+    opacity: 0; }
   50% {
-    transform: scale(1.5) translateX(30px) translateY(30px); }
-  100% {
-    transform: scale(1.6) translateX(90px) translateY(60px); } }
-@keyframes oscillation {
-  0% {
-    transform: translateY(0px); }
-  25% {
-    transform: translateY(-10px); }
-  75% {
-    transform: translateY(10px); }
-  100% {
-    transform: translateY(0px); } }
-@keyframes swipe {
-  50% {
-    transform: translateX(100px); }
-  100% {
-    z-index: 100;
-    transform: translateZ(-30px);
-    top: 100px; } }
+    opacity: 1; } }
+    body > header > div .action-buttons {
+      flex-basis: 100%;
+      display: flex;
+      position: absolute;
+      right: 56px;
+      bottom: 32px; }
+      body > header > div .action-buttons button {
+        width: 72px;
+        height: 72px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        font-size: 2em;
+        color: rgba(0, 0, 0, 0.1);
+        transition: 0.2s all ease-in-out;
+        border-radius: 50%;
+        cursor: pointer; }
+        body > header > div .action-buttons button:hover {
+          color: #fff;
+          background-color: #e04c56; }
+body main > section {
+  padding: 56px; }
+  body main > section > header {
+    height: 144px;
+    display: flex;
+    align-items: center; }
+    body main > section > header h2 {
+      font-size: 3em; }
+  body main > section .content {
+    height: calc(100vh - 144px - 56px);
+    display: flex; }
+    body main > section .content .feature-list {
+      flex-basis: 40%; }
+      body main > section .content .feature-list .feature {
+        min-height: 144px;
+        display: flex; }
+        body main > section .content .feature-list .feature div:first-child {
+          flex-basis: 80%;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          align-content: center;
+          border-bottom: 2px solid rgba(0, 0, 0, 0.06); }
+          body main > section .content .feature-list .feature div:first-child h3 {
+            flex-basis: 100%;
+            margin-bottom: 8px; }
+        body main > section .content .feature-list .feature div:last-child {
+          flex-basis: 20%;
+          display: none;
+          align-items: center;
+          justify-content: center; }
+          body main > section .content .feature-list .feature div:last-child a {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.2s all ease-in-out; }
+            body main > section .content .feature-list .feature div:last-child a:hover {
+              color: #fff;
+              background-color: #e04c56; }
+          body main > section .content .feature-list .feature div:last-child .fa {
+            font-size: 1.44em; }
+        body main > section .content .feature-list .feature.active div:first-child h3 {
+          color: #e04c56; }
+        body main > section .content .feature-list .feature.active div:last-child {
+          display: flex;
+          color: #e04c56; }
+    body main > section .content .feature-preview {
+      flex-basis: 60%;
+      background-color: #e04c56;
+      box-shadow: 0 3px 25px -5px rgba(0, 0, 0, 0.6); }
 
 /*# sourceMappingURL=home.css.map */
