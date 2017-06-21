@@ -90,36 +90,56 @@ body > header {
           background-color: #e04c56; }
 body main > section {
   padding: 56px; }
+  body main > section:nth-child(odd) {
+    background-color: #eee; }
   body main > section > header {
     height: 144px;
     display: flex;
     align-items: center; }
     body main > section > header h2 {
       font-size: 3em; }
-  body main > section .content {
-    height: calc(100vh - 144px - 56px);
+  body main > section > .content {
+    height: calc(100vh - 144px - 112px); }
+  body main > section#we-do .content {
     display: flex; }
-    body main > section .content .feature-list {
+    body main > section#we-do .content .feature-list {
       flex-basis: 40%; }
-      body main > section .content .feature-list .feature {
+      body main > section#we-do .content .feature-list .feature {
         min-height: 144px;
         display: flex; }
-        body main > section .content .feature-list .feature div:first-child {
+        body main > section#we-do .content .feature-list .feature > div:first-child {
           flex-basis: 80%;
           display: flex;
           flex-wrap: wrap;
           align-items: center;
           align-content: center;
-          border-bottom: 2px solid rgba(0, 0, 0, 0.06); }
-          body main > section .content .feature-list .feature div:first-child h3 {
+          border-bottom: 2px solid rgba(0, 0, 0, 0.06);
+          padding-right: 32px;
+          transition: 0.3s all ease-in-out;
+          cursor: pointer; }
+          body main > section#we-do .content .feature-list .feature > div:first-child:hover {
+            padding-left: 16px;
+            padding-right: 16px; }
+          body main > section#we-do .content .feature-list .feature > div:first-child h3 {
             flex-basis: 100%;
             margin-bottom: 8px; }
-        body main > section .content .feature-list .feature div:last-child {
-          flex-basis: 20%;
+          body main > section#we-do .content .feature-list .feature > div:first-child .tag-list {
+            display: flex;
+            margin-top: 16px; }
+            body main > section#we-do .content .feature-list .feature > div:first-child .tag-list .tag {
+              padding: 2px 6px;
+              border-left: 2px solid rgba(0, 0, 0, 0.3);
+              background-color: #fff;
+              font-size: 0.8em;
+              margin: 0 10px 2px 0;
+              color: rgba(0, 0, 0, 0.5); }
+        body main > section#we-do .content .feature-list .feature > div:last-child {
           display: none;
+          flex-basis: 20%;
+          padding-left: 16px;
           align-items: center;
-          justify-content: center; }
-          body main > section .content .feature-list .feature div:last-child a {
+          justify-content: flex-start; }
+          body main > section#we-do .content .feature-list .feature > div:last-child a {
             width: 48px;
             height: 48px;
             display: flex;
@@ -127,20 +147,23 @@ body main > section {
             justify-content: center;
             border-radius: 50%;
             cursor: pointer;
-            transition: 0.2s all ease-in-out; }
-            body main > section .content .feature-list .feature div:last-child a:hover {
+            transition: 0.2s all ease-in-out, 0.5s transform cubic-bezier(0.175, 0.885, 0.32, 3); }
+            body main > section#we-do .content .feature-list .feature > div:last-child a:hover {
               color: #fff;
-              background-color: #e04c56; }
-          body main > section .content .feature-list .feature div:last-child .fa {
+              background-color: #e04c56;
+              transform: scale(1.2); }
+          body main > section#we-do .content .feature-list .feature > div:last-child .fa {
             font-size: 1.44em; }
-        body main > section .content .feature-list .feature.active div:first-child h3 {
+        body main > section#we-do .content .feature-list .feature.active > div:first-child h3 {
           color: #e04c56; }
-        body main > section .content .feature-list .feature.active div:last-child {
+        body main > section#we-do .content .feature-list .feature.active > div:first-child .tag-list .tag {
+          border-left: 2px solid #e04c56; }
+        body main > section#we-do .content .feature-list .feature.active > div:last-child {
           display: flex;
           color: #e04c56; }
-    body main > section .content .feature-preview {
+    body main > section#we-do .content .feature-preview {
       flex-basis: 60%;
-      background-color: #e04c56;
+      background-color: #ec9298;
       box-shadow: 0 3px 25px -5px rgba(0, 0, 0, 0.6); }
 
 /*# sourceMappingURL=home.css.map */
