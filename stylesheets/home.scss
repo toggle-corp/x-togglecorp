@@ -223,6 +223,8 @@ body{
             }
             #member-list{
                 min-height: calc(90vh - 100px);
+                width: 80%;
+                margin: auto;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
@@ -347,6 +349,9 @@ body{
                             }
                         }
                     }
+                }
+                @media screen and (max-width: 1080px) {
+                    width: 100%;
                 }
             }
         }
