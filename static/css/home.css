@@ -122,17 +122,21 @@ body main > section {
             padding-right: 16px; }
           body main > section#we-do .content .feature-list .feature > div:first-child h3 {
             flex-basis: 100%;
-            margin-bottom: 8px; }
+            margin-bottom: 8px;
+            font-size: 1.44em;
+            color: #212121;
+            letter-spacing: 0.06em; }
           body main > section#we-do .content .feature-list .feature > div:first-child .tag-list {
             display: flex;
             margin-top: 16px; }
             body main > section#we-do .content .feature-list .feature > div:first-child .tag-list .tag {
-              padding: 2px 6px;
+              padding: 1px 6px;
               border-left: 2px solid rgba(0, 0, 0, 0.3);
               background-color: #fff;
               font-size: 0.8em;
               margin: 0 10px 2px 0;
-              color: rgba(0, 0, 0, 0.5); }
+              color: rgba(0, 0, 0, 0.5);
+              box-shadow: 0 1px 7px -3px rgba(0, 0, 0, 0.5); }
         body main > section#we-do .content .feature-list .feature > div:last-child {
           display: none;
           flex-basis: 20%;
@@ -162,8 +166,109 @@ body main > section {
           display: flex;
           color: #e04c56; }
     body main > section#we-do .content .feature-preview {
-      flex-basis: 60%;
-      background-color: #ec9298;
-      box-shadow: 0 3px 25px -5px rgba(0, 0, 0, 0.6); }
+      flex-basis: 60%; }
+      body main > section#we-do .content .feature-preview iframe {
+        width: 100%;
+        height: 100%; }
+  body main > section#we-are .content {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; }
+    body main > section#we-are .content .member {
+      width: 360px;
+      height: 420px;
+      margin: 10px;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      box-shadow: 0 5px 25px -7px rgba(0, 0, 0, 0.5); }
+      body main > section#we-are .content .member:hover img:nth-child(1) {
+        display: block;
+        filter: hue-rotate(270deg);
+        animation-name: glitch-anim;
+        animation-duration: 0.3s;
+        animation-direction: reverse;
+        animation-fill-mode: forwards;
+        animation-delay: 0.5s;
+        z-index: 1;
+        left: -12px;
+        visibility: hidden; }
+      body main > section#we-are .content .member:hover img:nth-child(2) {
+        visibility: hidden;
+        display: block;
+        filter: hue-rotate(180deg);
+        animation-name: glitch-anim;
+        animation-fill-mode: forwards;
+        animation-duration: 0.3s;
+        animation-delay: 0.5s;
+        z-index: 10;
+        left: 12px; }
+      body main > section#we-are .content .member img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center; }
+        body main > section#we-are .content .member img:nth-child(1) {
+          display: none; }
+        body main > section#we-are .content .member img:nth-child(2) {
+          display: none; }
+        body main > section#we-are .content .member img:nth-child(3) {
+          filter: grayscale(100%) brightness(120%); }
+      body main > section#we-are .content .member .details {
+        flex-basis: 100%;
+        z-index: 11;
+        text-align: center;
+        padding: 16px 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff; }
+@keyframes glitch-anim {
+  0% {
+    visibility: hidden; }
+  20% {
+    visibility: initial;
+    clip: rect(381px, 300px, 359px, 0); }
+  40% {
+    visibility: initial;
+    clip: rect(400px, 300px, 296px, 0); }
+  60% {
+    visibility: initial;
+    clip: rect(131px, 300px, 464px, 0); }
+  80% {
+    visibility: initial;
+    clip: rect(491px, 300px, 288px, 0); }
+  100% {
+    visibility: hidden; } }
+  body main > section#find-us .content {
+    display: flex;
+    line-height: 1.8; }
+    body main > section#find-us .content #description {
+      flex-basis: 30%;
+      padding-top: 32px; }
+      body main > section#find-us .content #description #brand {
+        font-size: 1.44em; }
+      body main > section#find-us .content #description #location {
+        font-weight: 700;
+        color: rgba(0, 0, 0, 0.3); }
+      body main > section#find-us .content #description #contact-no {
+        margin-top: 32px; }
+        body main > section#find-us .content #description #contact-no .fa {
+          margin-right: 10px; }
+      body main > section#find-us .content #description #mail .fa {
+        margin-right: 10px; }
+      body main > section#find-us .content #description #mail a {
+        color: #e04c56; }
+      body main > section#find-us .content #description #lost {
+        margin-top: 48px; }
+        body main > section#find-us .content #description #lost a {
+          display: block;
+          color: #e04c56; }
+    body main > section#find-us .content #map {
+      flex-basis: 70%;
+      background-color: blue; }
 
 /*# sourceMappingURL=home.css.map */

@@ -28,7 +28,7 @@ class TerminalCarousel {
             if (this.textLength <= text.length) {
                 this.write();
             } else {
-                this.terminal.addClass('blinking')
+                this.terminal.addClass('blinking');
                 setTimeout(() => this.erase(), this.waitToErase);
             }
         }, this.writeInterval);

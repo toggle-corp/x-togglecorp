@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('.carousel').each(() => {
+    $('.carousel').each(function() {
         new TerminalCarousel($(this), 64, 8, 3000, 200);
     });
 

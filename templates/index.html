@@ -65,11 +65,9 @@
                             <h3>Mobile application</h3>
                             <p>We help you bring your product to millions of users through Android apps.</p>
                             <div class="tag-list">
-                                <div class="tag">Sass</div>
-                                <div class="tag">ReactJS</div>
-                                <div class="tag">Angularjs</div>
-                                <div class="tag">Django</div>
-                                <div class="tag">PHP</div>
+                                <div class="tag">Android</div>
+                                <div class="tag">Java</div>
+                                <div class="tag">React Native</div>
                             </div>
                         </div>
                         <div>
@@ -81,9 +79,11 @@
                             <h3>Web platform</h3>
                             <p>We have wide range of expertise in terms of design and development in the web.</p>
                             <div class="tag-list">
-                                <div class="tag">Android</div>
-                                <div class="tag">Java</div>
-                                <div class="tag">React Native</div>
+                                <div class="tag">Sass</div>
+                                <div class="tag">ReactJS</div>
+                                <div class="tag">Angularjs</div>
+                                <div class="tag">Django</div>
+                                <div class="tag">PHP</div>
                             </div>
                         </div>
                         <div>
@@ -116,7 +116,26 @@
                 <h2>We work with</h2>
             </header>
             <div class="content">
-                ACAPS, OCHA, ACLED, IDMC, SystemX
+                <div>
+                    <div class="name">Assesment Capacities Project</div>
+                    <div class="short-name">ACAPS</div>
+                </div>
+                <div>
+                    <div class="name">Armed Conflict Location &amp; Event Data Project</div>
+                    <div class="short-name" >ACAPS</div>
+                </div>
+                <div>
+                    <div class="name">Office for the Coordination of Humanitarian Affairs</div>
+                    <div class="short-name">OCHA</div>
+                </div>
+                <div>
+                    <div class="name">Internal Displacement Monitoring Center</div>
+                    <div class="short-name">IDMC</div>
+                </div>
+                <div>
+                    <div class="name"></div>
+                    <div class="short-name">SMTM</div>
+                </div>
             </div>
         </section>
 
@@ -126,46 +145,59 @@
             </header>
             <div class="content">
                 <div class="member">
-                    <img>
+                    <img src="{% static 'img/team/fh.jpg' %}">
+                    <img src="{% static 'img/team/fh.jpg' %}">
+                    <img src="{% static 'img/team/fh.jpg' %}">
                     <div class="details">
                         <h3>Ankit Mehta</h3>
-                        <div class="designation">CEO, Co-founder, Develpoer</div>
+                        <div class="designation">CEO, Co-founder, Develper</div>
                     </div>
                 </div>
                  
                 <div class="member">
-                    <img>
+                    <img src="{% static 'img/team/bibek.jpg' %}">
+                    align-items: center;
+                    <img src="{% static 'img/team/bibek.jpg' %}">
+                    <img src="{% static 'img/team/bibek.jpg' %}">
                     <div class="details">
                         <h3>Bibek Dahal</h3>
-                        <div class="designation">Co-founder, Develpoer</div>
+                        <div class="designation">Co-founder, Develper</div>
                     </div>
                 </div>
                 <div class="member">
-                    <img>
+                    <img src="{% static 'img/team/adi.jpg' %}">
+                    <img src="{% static 'img/team/adi.jpg' %}">
+                    <img src="{% static 'img/team/adi.jpg' %}">
                     <div class="details">
                         <h3>Aditya Khatri</h3>
-                        <div class="designation">Co-founder, developer</div>
+                        <div class="designation">Co-founder, Developer</div>
                     </div>
                 </div>
 
                 <div class="member">
-                    <img>
+                    <img src="{% static 'img/team/pprabesh.jpg' %}">
+                    <img src="{% static 'img/team/pprabesh.jpg' %}">
+                    <img src="{% static 'img/team/pprabesh.jpg' %}">
                     <div class="details">
                         <h3>Prabesh Pathak</h3>
-                        <div class="designation">Co-founder, developer</div>
+                        <div class="designation">Co-founder, Developer</div>
                     </div>
                 </div>
 
                 <div class="member">
-                    <img>
+                    <img src="{% static 'img/team/navin.jpg' %}">
+                    <img src="{% static 'img/team/navin.jpg' %}">
+                    <img src="{% static 'img/team/navin.jpg' %}">
                     <div class="details">
                         <h3>Navin Ayer</h3>
-                        <div class="designation">Senior developer</div>
+                        <div class="designation">Developer</div>
                     </div>
                 </div>
 
                 <div class="member">
-                    <img>
+                    <img src="{% static 'img/team/safar.jpg' %}">
+                    <img src="{% static 'img/team/safar.jpg' %}">
+                    <img src="{% static 'img/team/safar.jpg' %}">
                     <div class="details">
                         <h3>Safar Ligal</h3>
                         <div class="designation"> Senior developer</div> 
@@ -173,7 +205,9 @@
                 </div>
 
                 <div class="member">
-                    <img>
+                    <img src="{% static 'img/team/ewan.jpg' %}">
+                    <img src="{% static 'img/team/ewan.jpg' %}">
+                    <img src="{% static 'img/team/ewan.jpg' %}">
                     <div class="details">
                         <h3>Ewan Oglethorpe</h3>
                         <div class="designation">Advisor</div>
@@ -187,10 +221,15 @@
                 <h2>Find us</h2>
             </header>
             <div class="content">
-                <div>Togglecorp Solutions Pvt. Ltd.</div>
-                <div>Jawalakhel, Patan, Nepal</div>
-                <div>+977-9841969697</div>
-                <div>Hope you don’t get lost: togglecorp.com/lost</div>
+                <div id="description">
+                    <div id="brand">Togglecorp Solutions Pvt. Ltd.</div>
+                    <div id="location">Jawalakhel, Patan, Nepal</div>
+                    <div id="contact-no"><i class="fa fa-phone"></i>+977-9841969697</div>
+                    <div id="mail"><i class="fa fa-envelope"></i><a href="mailto:info@togglecorp.com">info@togglecorp.com</a></div>
+                    <div id="lost">Hope you don’t get lost: <a href="http://togglecorp.com/lost">togglecorp.com/lost</a></div>
+                </div>
+                <div id="map">
+                </div>
             </div>
         </section>
     </main>
