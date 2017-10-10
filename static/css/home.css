@@ -148,9 +148,10 @@ body {
         body header > div {
           height: auto;
           min-height: 50vh; }
-          body header > div p {
-            text-align: center;
-            font-size: 1em; }
+          body header > div > p {
+            font-size: 1em;
+            display: flex;
+            justify-content: center; }
           body header > div .carousel {
             height: 120px; }
             body header > div .carousel p {
