@@ -10,127 +10,214 @@ body{
     h1, h2{
         text-transform: uppercase;
     }
-    header{
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        background-color: #717171;
-        background-image: url('../img/bg.jpg');
-        background-position: center center;
-        background-size: cover;
-        background-blend-mode: multiply;
-        color: #fff;
-        text-align: center;
 
-        #menu{
+    header {
+        position: relative;
+        $font-family-default: 'Inconsolata', monospace;
+
+        * {
+            font-family: $font-family-default;
+            box-sizing: border-box;
             margin: 0;
-            a{
-                display: inline-block;
-                color: #fff;
-                padding: 10px;
-                cursor: pointer;
-                opacity: 0.5;
-                letter-spacing: 0.1em;
-                margin-top: 4px;
-                font-weight: 400;
-                transition: 0.2s all ease-in-out;
+            padding: 0;
+        }
 
-                &:hover{
-                    opacity: 1;
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h1 {
+                min-height: 100px;
+                display: flex;
+                align-items: center;
+                font-size: 3em;
+                font-weight: $font-weight-normal;
+                padding: 0 56px;
+                color: #000;
+
+                span {
+                    &:first-child {
+                        color: $primary-color;
+                    }
+                }
+            }
+
+            #menu {
+                padding: 0 32px;
+
+                a {
+                    color: #000;
+                    margin: 0 16px;
+                    font-size: 1.6em;
+                    position: relative;
+
+                    &:before {
+                        position: absolute;
+                        top: -14px;
+                        left: -24px;
+                        font-size: 1.6em;
+                        visibility: hidden;
+                        content: ' {';
+                        transition: 0.2s all ease-in-out;
+                    }
+                    &:after {
+                        position: absolute;
+                        top: -14px;
+                        right: -24px;
+                        font-size: 1.6em;
+                        visibility: hidden;
+                        content: ' }';
+                        transition: 0.2s all ease-in-out;
+                    }
+
+                    &:hover {
+                        &:before{
+                            left: -16px;
+                            visibility: visible;
+                        }
+                        &:after {
+                            right: -16px;
+                            visibility: visible;
+                        }
+                    }
+                }
+            }
+            @media screen and (max-width: 720px) {
+                flex-wrap: wrap;
+
+                h1{
+                    flex-basis: 100%;
+                    font-size:2em;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                #menu {
+                    flex-basis: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+
+                    a {
+                        flex-basis: 100%;
+                        font-size: 1.2em;
+                        text-align: center;
+                    }
                 }
             }
         }
-        h1{
-            font-size: 6em;
-            font-weight: 100;
-            text-transform: uppercase;
-            margin-bottom: 16px;
-            margin-top: 0;
 
-            strong{
-                font-weight: 300;
-                color: $primary-color;
+        >div {
+            min-height: calc(100vh - 100px);
+            display: flex;
+            align-items: center;
+            align-content: center;
+            flex-wrap: wrap;
+
+            >p {
+                flex-basis: 100%;
+                display: flex;
+                align-items: center;
+                font-size: 3.2em;
+                color: rgba(0, 0, 0, 0.8);
+                padding: 0 56px;
+                font-weight: $font-weight-bold;
+                margin-bottom: 48px;
             }
-        }
-        p{
-            font-size: 2em;
-            font-weight: 300;
-            margin: 0;
-            letter-spacing: 10px;
-            text-transform: lowercase;
+
+            .carousel {
+                padding: 0 56px;
+                flex-basis: 100%;
+                display: flex;
+                align-items: center;
+
+                p {
+                    font-size: 1.44em;
+
+                    &:not(:first-child) {
+                        display: none;
+                    }
+                }
+            }
+
+            .carousel {
+                .terminal {
+                    &::before {
+                        content: '@togglecorp:~$ ';
+                        color: $primary-color;
+                    }
+
+                    &::after {
+                        content: '█';
+                    }
+
+                    &.blinking::after {
+                        animation: 1s blink step-end infinite;
+                    }
+                }
+
+                .content {
+                    display: none;
+                }
+            }
+
+            @keyframes blink {
+                from, to { opacity: 0; }
+                50% { opacity: 1; }
+            }
+
+
+            .action-buttons {
+                flex-basis: 100%;
+                display: flex;
+                position: absolute;
+                right: 56px;
+                bottom: 32px;
+
+                button {
+                    width: 72px;
+                    height: 72px;
+                    background-color: transparent;
+                    border: none;
+                    outline: none;
+                    font-size: 2em;
+                    color: rgba(0, 0, 0, 0.1);
+                    transition: 0.2s all ease-in-out;
+                    border-radius: 50%;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #fff;
+                        background-color: $primary-color;
+                    }
+                }
+            }
+            @media screen and (max-width: 720px) {
+                height: auto;
+                min-height: 50vh;
+
+                p {
+                    text-align: center;
+                    font-size: 1em;
+                }
+
+                .carousel {
+                    height: 120px;
+
+                    p {
+                        font-size: 1.1em;
+                        height: 100%;
+                    }
+                }
+
+                .action-buttons {
+                    right: calc(50% - 36px);
+                }
+            }
         }
         @media screen and (max-width: 720px) {
-            h1{
-                font-size: 4em;
-                font-weight: 100;
-
-                strong{
-                    font-weight: 300;
-                }
-            }
-            p{
-                font-size: 1.5em;
-                letter-spacing: 5px;
-            }
-        }
-        @media screen and (max-width: 480px) {
-            h1{
-                font-size: 3em;
-                font-weight: 100;
-
-                strong{
-                    font-weight: 300;
-                }
-            }
-            p{
-                font-size: 1em;
-                letter-spacing: 5px;
-            }
-        }
-        #arrow{
-            a{
-                display: inline-block;
-                width: 100px;
-                height: 76px;
-                position: relative;
-                cursor: pointer;
-                animation: oscillation 1s infinite linear;
-
-                #l, #r{
-                    position: absolute;
-                    display: inline-block;
-                    width: 72px;
-                    height: 3px;
-                    background-color: rgba(255, 255, 255, 0.6);
-                    top: 0;
-                    transition: 0.2s all linear;
-                }
-                #l{
-                    left: 0;
-                    transform-origin: left;
-                    transform: rotate(45deg);
-                }
-                #r{
-                    right: 0;
-                    transform-origin: right;
-                    transform: rotate(-45deg);
-                }
-
-                &:hover{
-                    animation: none;
-                    #l{
-                        transform: translateX(-5px) rotate(45deg) scale(1.1);
-                    }
-                    #r{
-                        transform: translateX(5px) rotate(-45deg) scale(1.1);
-                    }
-                    #l, #r{
-                        background-color: #fff;
-                    }
-                }
-            }
+            height: 100vh;
         }
     }
     main{

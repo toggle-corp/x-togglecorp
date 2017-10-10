@@ -5,6 +5,10 @@ body {
     padding: 0;
     background-color: #fff;
 
+    * {
+        line-height: 1.6;
+    }
+
     nav {
         display: flex;
         justify-content: space-between;
@@ -26,6 +30,11 @@ body {
             strong{
                 font-weight: 300;
                 color: $primary-color;
+            }
+        }
+        @media screen and (max-width: 720px) {
+            h1 {
+                font-size: 1.6em;
             }
         }
     }
@@ -91,6 +100,14 @@ body {
 
                             &:before {
                                 content: ': ';
+                            }
+                        }
+                        @media screen and (max-width: 720px) {
+                            .title {
+                                flex-basis: 96px;
+                            }
+                            .value {
+                                flex-basis: calc(100% - 96px);
                             }
                         }
                     }

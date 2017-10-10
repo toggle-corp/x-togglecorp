@@ -4,6 +4,10 @@ $(document).ready(function(){
         fixCarousel();
     });
 
+    $('.carousel').each(function() {
+        new TerminalCarousel($(this), 64, 8, 3000, 200);
+    });
+
     function fixCarousel(){
         if($('body').width() < 888){
             $('#product-list-wrapper').css('margin-left', (($('body').width()-888)/2)+'px');
