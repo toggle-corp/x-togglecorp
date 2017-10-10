@@ -1,0 +1,62 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Toggle Corp.</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400" rel="stylesheet">
+    <link href="{% static 'css/careers.css' %}" rel='stylesheet' type='text/css'>
+
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/home.js' %}"></script>
+</head>
+<body>
+    <nav>
+        <h1><a href="{% url 'index' %}">Toggle<strong>Corp</strong></a></h1>
+    </nav>
+    <main>
+        <h1>Careers</h1>
+        <div id="career-list">
+            {% for vacancy in vacancies %}
+            <div class="career">
+                <img src="{{ vacancy.header_image.url }}">
+                <h3 ="job-title">{{ vacancy.title }}</h3>
+                <date><i class="ion-ios-calendar"></i>{{ vacancy.date }}</date>
+                <div class="job-overview">
+                    {% for category in vacancy.overviewcategory_set.all %}
+                    <div class="category">
+                        <p class="title">{{ category.title }}</p>
+                        <p class="value">{{ category.value }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+                <a href="{% url 'career-details' vacancy.slug %}">Read more<i class="ion-ios-arrow-right"></i></a>
+            </div>
+            {% endfor %}
+        </div>
+    </main>
+    <footer>
+        <section id="contact">
+            <section id="contact-info">
+                <h2>Contact Us</h2>
+                <p><i class="fa fa-envelope"></i> <a href="mailto:info@togglecorp.com">info@togglecorp.com</a></p>
+                <p><i class="fa fa-phone"></i> +977-9841969697</p>
+                <p><i class="fa fa-map-o"></i> Pulchowk, Patan, Nepal</p>
+                <h3>Visit us again</h3>
+                <p><i class="fa fa-globe"></i> <a href="#home">togglecorp.com</a></p>
+                <h3>Wanna get lost?</h3>
+                <p><i class="fa fa-map-signs"></i> <a href="lost">togglecorp.com/lost</a></p>
+            </section>
+            <section id="the-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1485.5855254843193!2d85.31556386076223!3d27.675954023000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19cc62b59c8f%3A0xe38fc6d7cff6e8e8!2sTogglecorp!5e0!3m2!1sen!2snp!4v1481449564568" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </section>
+        </section>
+    </footer>
+</body>
+</html>

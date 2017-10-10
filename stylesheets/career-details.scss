@@ -1,0 +1,172 @@
+@import 'base';
+
+body {
+    background-color: #f0f0f0;
+     
+    h1, h2, h3, h4 {
+        margin: 0;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        height: 72px;
+        padding: 0 24px;
+        box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.5);
+
+        h1{
+            font-size: 3em;
+            font-weight: 100;
+            text-transform: uppercase;
+            margin: 0;
+
+            a {
+                color: #414141;
+            }
+            strong{
+                font-weight: 300;
+                color: $primary-color;
+            }
+        }
+    }
+    main {
+        z-index: 1;
+        padding-bottom: 32px;
+
+        header {
+            position: relative;
+            z-index: 1;
+
+            img {
+                width: 100%;
+                height: 40vh;
+                object-fit: cover;
+            }
+
+            #header-bg {
+                height: 40vh;
+                background: #fd746c;
+                background: linear-gradient(to top, #fd746c, #ff9068);
+            }
+        }
+
+        article {
+            position: relative; 
+            max-width: 800px;
+            min-height: 80vh;
+            padding: 32px;
+            background-color: #fff;
+            margin: -144px auto 0 auto;
+            z-index: 10;
+            box-shadow: 0 0 25px -5px rgba(0, 0, 0, 0.5);
+
+            @media screen and (max-width: 720px) {
+                padding: 24px;
+                margin: -108px 10px 0 10px;
+            }
+
+            h2 {
+                font-size: 2em;
+                line-height: 1.25;
+                margin-bottom: 16px;
+            }
+
+            date {
+                color: rgba(0, 0, 0, 0.5);
+                font-size: 1.11em;
+
+                i {
+                    margin-right: 10px;
+                }
+            }
+
+            .job-overview {
+                padding: 32px 0;
+
+                .section-title {
+                    text-transform: uppercase;
+                    font-size: 1.2em;
+                    font-weight: 600;
+                }
+
+                .category {
+                    display: flex;
+
+                    .title {
+                        flex-basis: 144px;
+                        padding: 0;
+                        margin: 0;
+                    }
+                    .value {
+                        flex-basis: calc(100% - 144px);
+                        padding: 0;
+                        margin: 0;
+
+                        &:before {
+                            content: ': ';
+                        }
+                    }
+                }
+                .section {
+                    .section-title {
+                        text-transform: uppercase;
+                        font-size: 1.2em;
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            > a {
+                display: inline-block;
+                margin-top: 16px;
+                text-transform: uppercase;
+                color: $primary-color;
+                font-size: 1.11em;
+                padding: 6px 0;
+
+                i {
+                    margin-right: 8px;
+                }
+            }
+
+
+        }
+    }
+
+    footer{
+        background-color: #eee;
+
+        #contact{
+            min-height: 500px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .fa{
+                width: 32px;
+            }
+            #the-map{
+                max-width: 800px;
+                width: 100%;
+                min-width: 200px;
+                max-height: 600px;
+                height: 100%;
+                min-height: 200px;
+
+                iframe{
+                    width: 100%;
+                    //box-sizing: border-box;
+                    height: 400px;
+                    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.5);
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                }
+            }
+            a{
+                color: $primary-color;
+            }
+        }
+    }
+}
