@@ -18,6 +18,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: #fff; }
+  body * {
+    letter-spacing: 1.6; }
   body nav {
     display: flex;
     justify-content: space-between;
@@ -36,6 +38,9 @@ body {
       body nav h1 strong {
         font-weight: 300;
         color: rgba(231, 76, 60, 0.8); }
+    @media screen and (max-width: 720px) {
+      body nav h1 {
+        font-size: 1.5em; } }
   body main {
     width: 80%;
     margin: auto; }
@@ -80,6 +85,11 @@ body {
             margin: 0; }
             body main #career-list .career .job-overview .category .value:before {
               content: ': '; }
+          @media screen and (max-width: 720px) {
+            body main #career-list .career .job-overview .category .title {
+              flex-basis: 72px; }
+            body main #career-list .career .job-overview .category .value {
+              flex-basis: calc(100% - 72px); } }
         body main #career-list .career a {
           display: inline-block;
           text-transform: uppercase;
