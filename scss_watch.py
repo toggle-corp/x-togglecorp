@@ -2,7 +2,7 @@
 
 import os
 
-cmd = 'sass --watch '
+cmd = 'sass --watch --trace '
 
 for file in os.listdir("stylesheets"):
     if not file.startswith("_") and file.endswith(".scss"):

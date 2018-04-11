@@ -182,7 +182,7 @@ body {
         padding-top: 48px; }
       body main #team #member-list {
         min-height: calc(90vh - 100px);
-        width: 80%;
+        width: 90%;
         margin: auto;
         display: flex;
         flex-wrap: wrap;

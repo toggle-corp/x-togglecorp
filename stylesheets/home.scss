@@ -223,14 +223,14 @@ body{
             }
             #member-list{
                 min-height: calc(90vh - 100px);
-                width: 80%;
+                width: 90%;
                 margin: auto;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
                 align-items: center;
 
-                .member{
+                .member {
                     position: relative;
                     transition: 0.2s all ease-in-out;
                     line-height: 0;
